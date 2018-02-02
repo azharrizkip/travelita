@@ -15,11 +15,44 @@ class Model extends CI_Model {
 	public function getUserByUsername($where,$tabel){
 		$query = $this->db->get_where($tabel,$where);
 		$result= $query->num_rows();
-
 		if ($result==1){
 			return true;
 		}else{
 			return false;
 		}
+	}
+	public function get_user($where=" "){
+		return $this->db->query("select * as get_user from user " .$where);
+	}
+	function GetData($data) {
+        $query = $this->db->get_where('user', $data);
+        return $query;
+    }
+	public function getuser($where=" "){
+		$data =$this->db->query('select * from user ' .$where);
+		return $data;
+	}
+
+	public function getfullname($where=" "){
+		$data =$this->db->query('select fullname from user ' .$where);
+		return $data;
+	}
+	public function getrute($where=" "){
+		$data =$this->db->query('select * from rute ' .$where);
+		return $data;
+	}
+	public function update_data($where,$data,$table){
+		$this->db->where($where);
+		$query = $this->db->update($table,$data);
+		return $query;
+	}
+	public function Hapus($table,$where){
+		return $this->db->delete($table,$where);
+	}
+	function tot_rute(){
+		return $this->db->query("select count(*) as tot_rute from rute");
+	}
+	function tot_user(){
+		return $this->db->query("select count(*) as tot_user from user");
 	}
 }

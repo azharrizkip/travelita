@@ -61,17 +61,8 @@
 						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 							<ul class="nav navbar-nav navbar-right">
 									<li class="scroll hvr-outline-in"><a href="index.html">Home</a></li>
-									 
 									<li><a class="scroll hvr-outline-in" href="#about">About</a></li>
 									<li><a class="scroll hvr-outline-in" href="#services">Services</a></li>
-									<li class="dropdown menu__item">
-										<a href="#" class="dropdown-toggle menu__link hvr-outline-in"  data-toggle="dropdown" data-hover="Pages" role="button" aria-haspopup="true" aria-expanded="false">Dropdown<span class="caret"></span></a>
-										<ul class="dropdown-menu">
-									<li><a class="scroll hvr-outline-in" href="#agents">Agents</a></li>
-										</ul>
-									</li>
-									<li><a class="scroll hvr-outline-in" href="#contact">Contact</a></li>
-									<li><a class="scroll hvr-outline-in" href="<?php echo base_url();?>Travelitacon/daftar">User</a></li>
 									<li><a class="scroll hvr-outline-in" href="<?php echo base_url();?>Travelitacon/daftar">Daftar</a></li>
 									<li><a class="scroll hvr-outline-in" href="<?php echo base_url();?>Travelitacon/login"><i class="fa fa-sign-in"></i> Masuk</a></li>
 							  </ul>
@@ -88,7 +79,7 @@
 				   <div class="banner-text">
 						<h2>Pesan Tiketmu Sekarang!</h2>
 						<div class="book-form">
-						   <form action="#" method="post">
+						   <form action="<?php echo base_url();?>Travelitacon/login" method="post">
 								<div class="col-md-4 form-date-w3-agileits">
 										<label><i class="fa fa-map-marker" aria-hidden="true"></i> Keberangkatan</label>
 										<select class="form-control">
@@ -589,7 +580,7 @@
 			</div>
 			<div class="col-md-4 about-left">
 				<div class="about-w3layouts-pic">
-					<img src="<?php echo URL_ASSETS;?>images/faq.png" alt=""/>	
+					<img src="<?php echo URL_ASSETS;?>images/faq1.png" alt=""/>	
 				</div> 
 			</div>
 				<div class="col-md-8 about-right">
