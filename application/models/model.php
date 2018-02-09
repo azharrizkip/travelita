@@ -32,7 +32,14 @@ class Model extends CI_Model {
 		$data =$this->db->query('select * from user ' .$where);
 		return $data;
 	}
-
+	public function gettrans($where=" "){
+		$data =$this->db->query('select * from transportation ' .$where);
+		return $data;
+	}
+	public function getkota($where=" "){
+		$data =$this->db->query('select * from kota ' .$where);
+		return $data;
+	}
 	public function getfullname($where=" "){
 		$data =$this->db->query('select fullname from user ' .$where);
 		return $data;
@@ -54,5 +61,8 @@ class Model extends CI_Model {
 	}
 	function tot_user(){
 		return $this->db->query("select count(*) as tot_user from user");
+	}
+	function tot_trans(){
+		return $this->db->query("select count(*) as tot_trans from transportation");
 	}
 }

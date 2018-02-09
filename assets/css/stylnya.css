@@ -169,7 +169,7 @@ input#inputPasswordConfirm {
 .login-form {
     width: 43.5%;
     margin-top: 100px;
-	 padding: 2em 2em;
+	padding: 2em 2em;
 }
 .login-form input[type="email"] {
     margin-bottom: 15px;

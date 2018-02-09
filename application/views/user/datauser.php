@@ -3,7 +3,7 @@
 <head>
   <?php $this->load->view('inc/head'); ?>
 </head>
-<body class="hold-transition skin-blue sidebar-mini">
+<body class="hold-transition skin-purple sidebar-mini">
 <div class="wrapper">
 
   <!-- Main Header -->
@@ -44,19 +44,22 @@
         <!-- Optionally, you can add icons to the links -->
         <li><a href="<?php base_url();?>dashboard"><i class="fa fa-home"></i> <span>Dashboard</span></a></li>
         <li><a href="<?php base_url();?>rute"><i class="fa fa-map"></i> <span>Rute Perjalanan</span></a></li>
+        <li><a href="<?php base_url();?>kota"><i class="fa fa-building"></i> <span>Kota</span></a></li>
         <li class="active"><a href="<?php base_url();?>user"><i class="fa fa-user"></i> <span>User</span></a></li>
+        <li><a href="<?php base_url();?>trans"><i class="fa fa-plane"></i> <span>Transportation</span></a></li>
         <li><a href="#"><i class="fa fa-book"></i> <span>Reservation</span></a></li>
-        <!-- <li class="treeview">
-          <a href="#"><i class="fa fa-link"></i> <span>Multilevel</span>
+        <li class="treeview">
+          <a href="#"><i class="fa fa-user"></i> <span>Profile</span>
             <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="#">Link in level 2</a></li>
-            <li><a href="#">Link in level 2</a></li>
+            <li><a href="#"><i class="fa fa-user"></i>Profil</a></li>
+            <li><a href="#"><i class="fa fa-pencil"></i>Edit Profil</a></li>
+            <li><a href="#"><i class="fa fa-clock-o"></i>Riwayat Reservasi</a></li>
           </ul>
-        </li> -->
+        </li>
       </ul>
       <!-- /.sidebar-menu -->
     </section>
@@ -68,11 +71,11 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Daftar Rute Perjalanan
+        Daftar User Travelita<em>.</em>
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li class="active">Dashboard</li>
+        <li class="active">User</li>
       </ol>
     </section>
     <!-- Main content -->

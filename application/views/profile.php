@@ -50,6 +50,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <li class="active"><a href="<?php base_url();?>dashboard"><i class="fa fa-home"></i> <span>Dashboard</span></a></li>
         <li><a href="<?php base_url();?>rute"><i class="fa fa-map"></i> <span>Rute Perjalanan</span></a></li>
         <li><a href="<?php base_url();?>user"><i class="fa fa-user"></i> <span>User</span></a></li>
+        <li><a href="<?php base_url();?>trans"><i class="fa fa-plane"></i> <span>Transportation</span></a></li>
         <li><a href="#"><i class="fa fa-book"></i> <span>Reservation</span></a></li>
         <li class="treeview">
           <a href="#"><i class="fa fa-user"></i> <span>Profile</span>
@@ -93,14 +94,32 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </div>
             <div class="box-footer">
               <div class="row">
-                
                 <!-- /.col -->
               </div>
               <!-- /.row -->
             </div>
           </div>
-          <!-- /.widget-user -->
-        </div>
+          </div>
+          <div class="col-md-3">
+           <div class="box box-widget">
+            <div class="box-body box-profile">
+            <ul class="list-group list-group-unbordered">
+                <li class="list-group-item">
+                  <b>Username</b> : <?php echo $this->session->userdata("username"); ?>
+                </li>
+                <li class="list-group-item">
+                  <b>Fullname</b> : <?php echo $this->session->userdata("fullname"); ?>
+                </li>
+                <li class="list-group-item">
+                  <b>Email</b> : <?php echo $this->session->userdata("email"); ?>
+                </li>
+                <li class="list-group-item">
+                  <b>Level</b> : <?php echo $this->session->userdata("level"); ?>
+                </li>
+              </ul>
+          </div>
+          </div>
+          </div>
     <section class="content container-fluid">
     </section>
     <!-- /.content -->

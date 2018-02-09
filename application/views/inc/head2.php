@@ -66,7 +66,7 @@
                 <ul class="menu">
                   <li><!-- start notification -->
                     <a href="#">
-                      <i class="fa fa-ticket text-aqua"></i> Verifikasi pembelian tiket anda
+                      <i class="fa fa-user text-aqua"></i> Verifikasi akun anda
                     </a>
                   </li>
                   <!-- end notification -->

@@ -8,7 +8,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <?php $this->load->view('inc/head'); ?>
 </head>
 
-<body class="hold-transition skin-blue sidebar-mini">
+<body class="hold-transition skin-purple sidebar-mini">
 <div class="wrapper">
 
   <!-- Main Header -->
@@ -49,7 +49,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <!-- Optionally, you can add icons to the links -->
         <li class="active"><a href="<?php base_url();?>dashboard"><i class="fa fa-home"></i> <span>Dashboard</span></a></li>
         <li><a href="<?php base_url();?>rute"><i class="fa fa-map"></i> <span>Rute Perjalanan</span></a></li>
+        <li><a href="<?php base_url();?>kota"><i class="fa fa-building"></i> <span>Kota</span></a></li>
         <li><a href="<?php base_url();?>user"><i class="fa fa-user"></i> <span>User</span></a></li>
+        <li><a href="<?php base_url();?>trans"><i class="fa fa-plane"></i> <span>Transportation</span></a></li>
         <li><a href="#"><i class="fa fa-book"></i> <span>Reservation</span></a></li>
         <li class="treeview">
           <a href="#"><i class="fa fa-user"></i> <span>Profile</span>
@@ -116,7 +118,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
           <!-- small box -->
           <div class="small-box bg-green">
             <div class="inner">
-              <h3>30</h3>
+              <h3>0</h3>
 
               <p>Reservation</p>
             </div>
@@ -130,14 +132,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
           <!-- small box -->
           <div class="small-box bg-orange">
             <div class="inner">
-              <h3>45</h3>
+              <h3><?php echo $tot_trans;?></h3>
 
               <p>Transportation</p>
             </div>
             <div class="icon">
               <i class="fa fa-plane"></i>
             </div>
-            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="<?php echo base_url()?>Travelitacon/trans" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
 

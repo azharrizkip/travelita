@@ -1,774 +1,341 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<title>Travelita</title>
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
-		function hideURLbar(){ window.scrollTo(0,1); } </script>
-		
-<!-- for banner css files -->
-<link rel="stylesheet" type="text/css" href="<?php echo URL_ASSETS;?>css/zoomslider.css" /><!--zoomslider css -->
-<script type="text/javascript" src="<?php echo URL_ASSETS;?>js/modernizr-2.6.2.min.js"></script><!--modernizer css -->
-<!-- //for banner css files -->
+<!DOCTYPE HTML>
+<!--
+	Aesthetic by gettemplates.co
+	Twitter: http://twitter.com/gettemplateco
+	URL: http://gettemplates.co
+-->
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Travelita</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Free HTML5 Website Template by GetTemplates.co" />
+	<meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
+	<meta name="author" content="GetTemplates.co" />
+
+  	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
 	
-<link href="<?php echo URL_ASSETS;?>css/carousel.css" type="text/css" rel="stylesheet" media="all"><!--for team carousel css --> 
- 
-<link href="<?php echo URL_ASSETS;?>css/jQuery.lightninBox.css" rel="stylesheet" type="text/css" media="all" /><!-- for portfolio lightninBox css -->
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="<?php echo URL_ASSETS;?>front/css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="<?php echo URL_ASSETS;?>front/css/icomoon.css">
+	<!-- Themify Icons-->
+	<link rel="stylesheet" href="<?php echo URL_ASSETS;?>front/css/themify-icons.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="<?php echo URL_ASSETS;?>front/css/bootstrap.css">
 
-<!-- custom-theme css files -->
-<link href="<?php echo URL_ASSETS;?>css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-<link href="<?php echo URL_ASSETS;?>css/style.css" rel="stylesheet" type="text/css" media="all" />
-<!-- //custom-theme css files-->
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="<?php echo URL_ASSETS;?>front/css/magnific-popup.css">
 
-<!-- font-awesome-icons -->
-<link href="<?php echo URL_ASSETS;?>css/font-awesome.css" rel="stylesheet"> 
-<!-- //font-awesome-icons -->
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="<?php echo URL_ASSETS;?>front/css/bootstrap-datepicker.min.css">
 
-<!-- googlefonts -->
-<link href="//fonts.googleapis.com/css?family=Cabin:400,400i,500,500i,600,600i,700,700i&amp;subset=latin-ext,vietnamese" rel="stylesheet">
-<link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
-<!-- //googlefonts -->
+	<!-- Owl Carousel  -->
+	<link rel="stylesheet" href="<?php echo URL_ASSETS;?>front/css/owl.carousel.min.css">
+	<link rel="stylesheet" href="<?php echo URL_ASSETS;?>front/css/owl.theme.default.min.css">
+
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="<?php echo URL_ASSETS;?>front/css/style.css">
+
+	<!-- Modernizr JS -->
+	<script src="<?php echo URL_ASSETS;?>front/js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
 <style type="text/css">
-.faq {
-    background: url(<?php echo URL_ASSETS;?>images/01.jpg) no-repeat 0px 0px;
-    background-size: cover;
+.row-mt-10em {
+    margin-top: 12em;
+  }
+@media screen and (max-width: 768px) {
+  .row-mt-10em {
+    margin-top: 5em;
+    text-align: center;
+  }
 }
-.banner-text{
-
+#gtco-header .mt-text {
+  margin-top: 6em;
+}
+@media screen and (max-width: 768px) {
+  #gtco-header .mt-text {
+    margin-top: 0;
+  }
 }
 </style>
-</head>
-<body>
-
-<!--/main-header-->
-<div id="demo-1" data-zs-src='["<?php echo URL_ASSETS;?>images/01.jpg", "<?php echo URL_ASSETS;?>images/02.jpg", "<?php echo URL_ASSETS;?>images/03.jpg", "<?php echo URL_ASSETS;?>images/04.jpg"]' data-zs-overlay="dots">
-	<div class="demo-inner-content">
-	
-	<!--/banner-info-->
-	   <div class="header">
-			   <div class="header-main">
-				 <div class="container">
-				<nav class="navbar navbar-default">
-						<div class="navbar-header">
-							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-								<span class="sr-only">Toggle navigation</span>
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-							</button>
-							<h1><a href="#">&nbspTrip<span>T r a v e l i t a</span></a></h1>
-						</div>
-						<!-- navbar-header -->
-						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-							<ul class="nav navbar-nav navbar-right">
-									<li class="scroll hvr-outline-in"><a href="index.html">Home</a></li>
-									<li><a class="scroll hvr-outline-in" href="#about">About</a></li>
-									<li><a class="scroll hvr-outline-in" href="#services">Services</a></li>
-									<li><a class="scroll hvr-outline-in" href="<?php echo base_url();?>Travelitacon/daftar">Daftar</a></li>
-									<li><a class="scroll hvr-outline-in" href="<?php echo base_url();?>Travelitacon/login"><i class="fa fa-sign-in"></i> Masuk</a></li>
-							  </ul>
-							  
-						</div>
-						<div class="clearfix"> </div>	
-					</nav>
-				 <div class="clearfix"> </div>
-			   </div>
-			   </div>
-		</div>
-		<div class="w3-banner-head-info">
-				<div class="container">
-				   <div class="banner-text">
-						<h2>Pesan Tiketmu Sekarang!</h2>
-						<div class="book-form">
-						   <form action="<?php echo base_url();?>Travelitacon/login" method="post">
-								<div class="col-md-4 form-date-w3-agileits">
-										<label><i class="fa fa-map-marker" aria-hidden="true"></i> Keberangkatan</label>
-										<select class="form-control">
-											<option>Jakarta</option>
-											<option>Bali</option>
-											<option>Yogyakarta</option>
-											<option>Pontianak</option>
-											<option>Sumatera</option>
-										</select>
-								</div>
-								<div class="col-md-4 form-date-w3-agileits">
-										<label><i class="fa fa-map-marker" aria-hidden="true"></i> Tujuan</label>
-										<select class="form-control">
-											<option>Jakarta</option>
-											<option>Bali</option>
-											<option>Yogyakarta</option>
-											<option>Pontianak</option>
-											<option>Sumatera</option>
-										</select>
-								</div>
-								<div class="col-md-4 form-date-w3-agileits">
-										<label><i class="fa fa-calendar" aria-hidden="true"></i> Pergi</label>
-										<select class="form-control">
-											<option>Jakarta</option>
-											<option>Bali</option>
-											<option>Yogyakarta</option>
-											<option>Pontianak</option>
-											<option>Sumatera</option>
-										</select>
-								</div>
-								<div class="col-md-4 form-date-w3-agileits">
-										<label><i class="fa fa-calendar" aria-hidden="true"></i> Pulang</label>
-										<select class="form-control">
-											<option>Jakarta</option>
-											<option>Bali</option>
-											<option>Yogyakarta</option>
-											<option>Pontianak</option>
-											<option>Sumatera</option>
-										</select>
-								</div>
-								<div class="col-md-4 form-left-agileits-w3layouts ">
-										<label><i class="fa fa-user" aria-hidden="true"></i> Orang</label>
-										<select class="form-control">
-											<option>Real estate</option>
-											<option>Real Homes</option>
-											<option>Apartments</option>
-											<option>Real Flats</option>
-										</select>
-								</div>
-								<div class="col-md-4 form-left-agileits-submit">
-									  <input type="submit" value="Cari Penerbangan">
-								</div>
-								<div class="clearfix"></div>
-							</form>
-						</div>
-					</div>
-				</div>
-		</div>
-			<!--/banner-info-->
-	</div>
-</div>
- <!--/banner-section-->
-
-<!-- about section -->
-<div class="about" id="about">
-	<div class="container">
-		<div class="about-top">
-			<div class="col-md-4 text-center ">
-				<h3>Who we are</h3>
-			</div>	
-			<div class="col-md-8 text">
-				<p>Maecenas luctus odio est, sed ornare felis vestibulum sit amet. Morbi id eros metus. Vestibulum pulvinar leo a nibh
-					commodo lobortis.</p>
-			</div>	
-			<div class="clearfix"></div>
-		</div>	
-		<div class="about-bottom-grid2">
-			<div class="col-md-6 bottomgridimg">
-				<img src="<?php echo URL_ASSETS;?>images/about2.jpg" alt="">
-			</div>
-			<div class="col-md-6 bottomgridtext bottomleft">
-				<h3>Flat property value</h3>
-				<span></span>
-				<p>Lorem ipsum dolor sit amet, Sed ut perspiciatis unde omnis iste natus error sit voluptatem , eaque ipsa quae ab illo inventore </p>
-			</div>
-			<div class="clearfix"></div>
-		</div>
+	</head>
+	<body>
 		
-		<div class="about-bottom-grid1">
-			<div class="col-md-6 bottomgridtext">
-				<h3>Flat property value</h3>
-				<span></span>
-				<p>Lorem ipsum dolor sit amet, Sed ut perspiciatis unde omnis iste natus error sit voluptatem , eaque ipsa quae ab illo inventore </p>
-				<p>Lorem ipsum dolor sit amet, Sed ut perspiciatis unde omnis iste natus error sit voluptatem </p>
-			</div>
-			<div class="col-md-6 bottomgridimg">
-				<img src="<?php echo URL_ASSETS;?>images/about1.jpg" alt="">
-			</div>
-			<div class="clearfix"></div>
-		</div>
-	</div>
-</div>
-<!--// about -->
+	<div class="gtco-loader"></div>
+	
+	<div id="page">
 
-<!-- services -->
-<div class="services" id="services">
-<div class="banner-dott">
-		<div class="heading">
-			<h3>What we offer</h3>
-			<p>Lorem ipsum dolor sit amet, Sed ut perspiciatis unde omnis iste natus error sit voluptatem </p>
+	
+	<!-- <div class="page-inner"> -->
+	<nav class="gtco-nav" role="navigation">
+		<div class="gtco-container">
+			
+			<div class="row">
+				<div class="col-sm-4 col-xs-12">
+					<div id="gtco-logo"><a href="index.html">Travelita	 <em>.</em></a></div>
+				</div>
+				<div class="col-xs-8 text-right menu-1">
+					<ul>
+						<li><a href="<?php echo base_url();?>Travelitacon">Home</a></li>
+						<li><a href="<?php echo base_url();?>Travelitacon/daftar">Register</a></li>
+						<li><a href="<?php echo base_url();?>Travelitacon/login">Login</a></li>
+					</ul>	
+				</div>
+			</div>
+			
 		</div>
-	<div class="container">
-		<div class="services-top-grids">
-			<div class="col-md-4">
-				<div class="grid1">
-					<i class="fa fa-home" aria-hidden="true"></i>
-					<h4>Legal consultants</h4>
-					<p>Lorem ipsum dolor sit amet, Sed ut perspiciatis unde omnis iste natus error sit voluptatem </p>
-				</div>
-			</div>
-			<div class="col-md-4">
-				<div class="grid1">
-					<i class="fa fa-building" aria-hidden="true"></i>
-					<h4>Building materials</h4>
-					<p>Lorem ipsum dolor sit amet, Sed ut perspiciatis unde omnis iste natus error sit voluptatem </p>
-				</div>
-			</div>
-			<div class="col-md-4">
-				<div class="grid1">
-					<i class="fa fa-money" aria-hidden="true"></i>
-					<h4>quality roof</h4>
-					<p>Lorem ipsum dolor sit amet, Sed ut perspiciatis unde omnis iste natus error sit voluptatem </p>
-				</div>
-			</div>
-			<div class="clearfix"></div>
-		</div>
-		<div class="services-bottom-grids">
-			<div class="col-md-4">
-				<div class="grid1">
-					<i class="fa fa-money" aria-hidden="true"></i>
-					<h4>Heavy equipment</h4>
-					<p>Lorem ipsum dolor sit amet, Sed ut perspiciatis unde omnis iste natus error sit voluptatem </p>
-				</div>
-			</div>
-			<div class="col-md-4">
-				<div class="grid1">
-					<i class="fa fa-home" aria-hidden="true"></i>
-					<h4>property strength</h4>
-					<p>Lorem ipsum dolor sit amet, Sed ut perspiciatis unde omnis iste natus error sit voluptatem </p>
-				</div>
-			</div>
-			<div class="col-md-4">
-				<div class="grid1">
-					<i class="fa fa-briefcase" aria-hidden="true"></i>
-					<h4>Statistic value</h4>
-					<p>Lorem ipsum dolor sit amet, Sed ut perspiciatis unde omnis iste natus error sit voluptatem </p>
-				</div>
-			</div>
-			<div class="clearfix"></div>
-		</div>
-	</div>
-</div>
-</div>
-<!-- //services -->
+	</nav>
+	
+	<header id="gtco-header" class="gtco-cover gtco-cover-md" role="banner" style="background-image: url(<?php echo URL_ASSETS;?>front/images/2.jpg); background-size: cover;">
+		<div class="overlay"></div>
+		<div class="gtco-container">
+			<div class="row">
+				<div class="col-md-12 col-md-offset-0 text-left">
+					
 
-<!-- Portfolio section -->
-<section class="portfolio-agileinfo" id="properties">
-		<div class="heading">
-			<h3>Tujuan Favorit</h3>
-		</div><br>
-	<div class="gallery-grids">
-			<div id="myTabContent" class="tab-content">
-				<div role="tabpanel" class="tab-pane fade in active" id="home" aria-labelledby="home-tab">
-					<div class="tab_img">
-						<div class="col-md-3 col-sm-6 col-xs-6 portfolio-grids" data-aos="zoom-in">
-							<a href="<?php echo URL_ASSETS;?>images/banner.jpg" class="b-link-stripe b-animate-go lightninBox" data-lb-group="1">
-								<img src="<?php echo URL_ASSETS;?>images/banner.jpg" class="img-responsive" alt="w3ls" />
-								<div class="b-wrapper">
-									<i class="fa fa-search-plus" aria-hidden="true"></i>
-									<h5>Flat</h5>
-									<p>Neque porro quisquam est.</p>
-								</div>
-							</a>
+					<div class="row row-mt-10em">
+						<div class="col-md-7 mt-text animate-box" data-animate-effect="fadeInUp">
+							<h1 style="font-family: Comic Sans MS;">Liburan kemanapun dan Kapanpun<em>!</em></h1>	
 						</div>
-						<div class="col-md-3 col-sm-6 col-xs-6 portfolio-grids" data-aos="zoom-in">
-							<a href="<?php echo URL_ASSETS;?>images/banner1.jpg" class="b-link-stripe b-animate-go lightninBox" data-lb-group="1">
-								<img src="<?php echo URL_ASSETS;?>images/banner1.jpg" class="img-responsive" alt="w3ls"/>
-								<div class="b-wrapper">
-									<i class="fa fa-search-plus" aria-hidden="true"></i>
-									<h5>Flat</h5>
-									<p>Neque porro quisquam est.</p>
-								</div>
-							</a>
-						</div>
-						<div class="col-md-3 col-sm-6 col-xs-6 portfolio-grids" data-aos="zoom-in">
-							<a href="<?php echo URL_ASSETS;?>images/banner2.jpg" class="b-link-stripe b-animate-go lightninBox" data-lb-group="1">
-								<img src="<?php echo URL_ASSETS;?>images/banner2.jpg" class="img-responsive" alt="w3ls"/>
-								<div class="b-wrapper">
-									<i class="fa fa-search-plus" aria-hidden="true"></i>
-									<h5>Flat</h5>
-									<p>Neque porro quisquam est.</p>
-								</div>
-							</a>
-						</div>
-						<div class="col-md-3 col-sm-6 col-xs-6 portfolio-grids" data-aos="zoom-in">
-							<a href="<?php echo URL_ASSETS;?>images/banner3.jpg" class="b-link-stripe b-animate-go lightninBox" data-lb-group="1">
-								<img src="<?php echo URL_ASSETS;?>images/banner3.jpg" class="img-responsive" alt="w3ls"/>
-								<div class="b-wrapper">
-									<i class="fa fa-search-plus" aria-hidden="true"></i>
-									<h5>Flat</h5>
-									<p>Neque porro quisquam est.</p>
-								</div>
-							</a>
-						</div>
-						<div class="clearfix"> </div>
-					</div>
-					<div class="tab_img">
-						<div class="col-md-3 col-sm-6 col-xs-6 portfolio-grids" data-aos="zoom-in">
-							<a href="<?php echo URL_ASSETS;?>images/banner4.jpg" class="b-link-stripe b-animate-go lightninBox" data-lb-group="1">
-								<img src="<?php echo URL_ASSETS;?>images/banner4.jpg" class="img-responsive" alt="w3ls"/>
-								<div class="b-wrapper">
-									<i class="fa fa-search-plus" aria-hidden="true"></i>
-									<h5>Flat</h5>
-									<p>Neque porro quisquam est.</p>
-								</div>
-							</a>
-						</div>
-						<div class="col-md-3 col-sm-6 col-xs-6 portfolio-grids" data-aos="zoom-in">
-							<a href="<?php echo URL_ASSETS;?>images/banner5.jpg" class="b-link-stripe b-animate-go lightninBox" data-lb-group="1">
-								<img src="<?php echo URL_ASSETS;?>images/banner5.jpg" class="img-responsive" alt="w3ls"/>
-								<div class="b-wrapper">
-									<i class="fa fa-search-plus" aria-hidden="true"></i>
-									<h5>Flat</h5>
-									<p>Neque porro quisquam est.</p>
-								</div>
-							</a>
-						</div>
-						<div class="col-md-3 col-sm-6 col-xs-6 portfolio-grids" data-aos="zoom-in">
-							<a href="<?php echo URL_ASSETS;?>images/b6.jpg" class="b-link-stripe b-animate-go lightninBox" data-lb-group="1">
-								<img src="<?php echo URL_ASSETS;?>images/b6.jpg" class="img-responsive" alt="w3ls"/>
-								<div class="b-wrapper">
-									<i class="fa fa-search-plus" aria-hidden="true"></i>
-									<h5>Flat</h5>
-									<p>Neque porro quisquam est.</p>
-								</div>
-							</a>
-						</div>
-						<div class="col-md-3 col-sm-6 col-xs-6 portfolio-grids" data-aos="zoom-in">
-							<a href="<?php echo URL_ASSETS;?>images/b5.jpg" class="b-link-stripe b-animate-go lightninBox" data-lb-group="1">
-								<img src="<?php echo URL_ASSETS;?>images/b5.jpg" class="img-responsive" alt="w3ls"/>
-								<div class="b-wrapper">
-									<i class="fa fa-search-plus" aria-hidden="true"></i>
-									<h5>Flat</h5>
-									<p>Neque porro quisquam est.</p>
-								</div>
-							</a>
-						</div>
-						<div class="col-md-3 col-sm-6 col-xs-6 portfolio-grids" data-aos="zoom-in">
-							<a href="<?php echo URL_ASSETS;?>images/b1.jpg" class="b-link-stripe b-animate-go lightninBox" data-lb-group="1">
-								<img src="<?php echo URL_ASSETS;?>images/b1.jpg" class="img-responsive" alt="w3ls"/>
-								<div class="b-wrapper">
-									<i class="fa fa-search-plus" aria-hidden="true"></i>
-									<h5>Flat</h5>
-									<p>Neque porro quisquam est.</p>
-								</div>
-							</a>
-						</div>
-						<div class="col-md-3 col-sm-6 col-xs-6 portfolio-grids" data-aos="zoom-in">
-							<a href="<?php echo URL_ASSETS;?>images/b2.jpg" class="b-link-stripe b-animate-go lightninBox" data-lb-group="1">
-								<img src="<?php echo URL_ASSETS;?>images/b2.jpg" class="img-responsive" alt="w3ls"/>
-								<div class="b-wrapper">
-									<i class="fa fa-search-plus" aria-hidden="true"></i>
-									<h5>Flat</h5>
-									<p>Neque porro quisquam est.</p>
-								</div>
-							</a>
-						</div>
-						<div class="col-md-3 col-sm-6 col-xs-6 portfolio-grids" data-aos="zoom-in">
-							<a href="<?php echo URL_ASSETS;?>images/b3.jpg" class="b-link-stripe b-animate-go lightninBox" data-lb-group="1">
-								<img src="<?php echo URL_ASSETS;?>images/b3.jpg" class="img-responsive" alt="w3ls"/>
-								<div class="b-wrapper">
-									<i class="fa fa-search-plus" aria-hidden="true"></i>
-									<h5>Flat</h5>
-									<p>Neque porro quisquam est.</p>
-								</div>
-							</a>
-						</div>
-						<div class="col-md-3 col-sm-6 col-xs-6 portfolio-grids" data-aos="zoom-in">
-							<a href="<?php echo URL_ASSETS;?>images/b4.jpg" class="b-link-stripe b-animate-go lightninBox" data-lb-group="1">
-								<img src="<?php echo URL_ASSETS;?>images/b4.jpg" class="img-responsive" alt="w3ls"/>
-								<div class="b-wrapper">
-									<i class="fa fa-search-plus" aria-hidden="true"></i>
-									<h5>Flat</h5>
-									<p>Neque porro quisquam est.</p>
-								</div>
-							</a>
-						</div>
-						<div class="clearfix"> </div>
-					</div>
-				</div>
-				<div role="tabpanel" class="tab-pane fade" id="teach" aria-labelledby="teach-tab">
-					<div class="tab_img">
-						<div class="col-md-3 col-sm-6 col-xs-6 portfolio-grids" data-aos="zoom-in">
-							<a href="<?php echo URL_ASSETS;?>images/b1.jpg" class="b-link-stripe b-animate-go lightninBox" data-lb-group="2">
-								<img src="<?php echo URL_ASSETS;?>images/b1.jpg" class="img-responsive zoom-img" alt="w3ls"/>
-								<div class="b-wrapper">
-									<i class="fa fa-search-plus" aria-hidden="true"></i>
-									<h5>Flat</h5>
-									<p>Neque porro quisquam est.</p>
-								</div>
-							</a>
-						</div>
-						<div class="col-md-3 col-sm-6 col-xs-6 portfolio-grids" data-aos="zoom-in">
-							<a href="<?php echo URL_ASSETS;?>images/b2.jpg" class="b-link-stripe b-animate-go lightninBox" data-lb-group="2">
-								<img src="<?php echo URL_ASSETS;?>images/b2.jpg" class="img-responsive zoom-img" alt="w3ls"/>
-								<div class="b-wrapper">
-									<i class="fa fa-search-plus" aria-hidden="true"></i>
-									<h5>Flat</h5>
-									<p>Neque porro quisquam est.</p>
-								</div>
-							</a>
-						</div>
-						<div class="col-md-3 col-sm-6 col-xs-6 portfolio-grids" data-aos="zoom-in">
-							<a href="<?php echo URL_ASSETS;?>images/b3.jpg" class="b-link-stripe b-animate-go lightninBox" data-lb-group="2">
-								<img src="<?php echo URL_ASSETS;?>images/b3.jpg" class="img-responsive zoom-img" alt="w3ls"/>
-								<div class="b-wrapper">
-									<i class="fa fa-search-plus" aria-hidden="true"></i>
-									<h5>Flat</h5>
-									<p>Neque porro quisquam est.</p>
-								</div>
-							</a>
-						</div>
-						<div class="clearfix"> </div>
-					</div>	
-				</div>
-				<div role="tabpanel" class="tab-pane fade" id="train" aria-labelledby="train-tab">
-					<div class="tab_img">
-						<div class="col-md-3 col-sm-6 col-xs-6 portfolio-grids" data-aos="zoom-in">
-							<a href="<?php echo URL_ASSETS;?>images/b4.jpg" class="b-link-stripe b-animate-go lightninBox" data-lb-group="3">
-								<img src="<?php echo URL_ASSETS;?>images/b4.jpg" class="img-responsive zoom-img" alt="w3ls"/>
-								<div class="b-wrapper">
-									<i class="fa fa-search-plus" aria-hidden="true"></i>
-									<h5>Flat</h5>
-									<p>Neque porro quisquam est.</p>
-								</div>
-							</a>
-						</div>
-						<div class="col-md-3 col-sm-6 col-xs-6 portfolio-grids" data-aos="zoom-in">
-							<a href="<?php echo URL_ASSETS;?>images/b2.jpg" class="b-link-stripe b-animate-go lightninBox" data-lb-group="3">
-								<img src="<?php echo URL_ASSETS;?>images/b2.jpg" class="img-responsive zoom-img" alt="w3ls"/>
-								<div class="b-wrapper">
-									<i class="fa fa-search-plus" aria-hidden="true"></i>
-									<h5>Flat</h5>
-									<p>Neque porro quisquam est.</p>
-								</div>
-							</a>
-						</div>
-						<div class="clearfix"> </div>
-					</div>	
-				</div>
-				<div role="tabpanel" class="tab-pane fade" id="learn" aria-labelledby="learn-tab">
-					<div class="tab_img">
-						<div class="col-md-3 col-sm-6 col-xs-6 portfolio-grids" data-aos="zoom-in">
-							<a href="<?php echo URL_ASSETS;?>images/b1.jpg" class="b-link-stripe b-animate-go lightninBox" data-lb-group="4">
-								<img src="<?php echo URL_ASSETS;?>images/b1.jpg" class="img-responsive zoom-img" alt="w3ls"/>
-								<div class="b-wrapper">
-									<i class="fa fa-search-plus" aria-hidden="true"></i>
-									<h5>Flat</h5>
-									<p>Neque porro quisquam est.</p>
-								</div>
-							</a>
-						</div>
-						<div class="col-md-3 col-sm-6 col-xs-6 portfolio-grids" data-aos="zoom-in">
-							<a href="<?php echo URL_ASSETS;?>images/b2.jpg" class="b-link-stripe b-animate-go lightninBox" data-lb-group="4">
-								<img src="<?php echo URL_ASSETS;?>images/b2.jpg" class="img-responsive zoom-img" alt="w3ls"/>
-								<div class="b-wrapper">
-									<i class="fa fa-search-plus" aria-hidden="true"></i>
-									<h5>Flat</h5>
-									<p>Neque porro quisquam est.</p>
-								</div>
-							</a>
-						</div>
-						<div class="col-md-3 col-sm-6 col-xs-6 portfolio-grids" data-aos="zoom-in">
-							<a href="<?php echo URL_ASSETS;?>images/b3.jpg" class="b-link-stripe b-animate-go lightninBox" data-lb-group="4">
-								<img src="<?php echo URL_ASSETS;?>images/b3.jpg" class="img-responsive zoom-img" alt="w3ls"/>
-								<div class="b-wrapper">
-									<i class="fa fa-search-plus" aria-hidden="true"></i>
-									<h5>Flat</h5>
-									<p>Neque porro quisquam est.</p>
-								</div>
-							</a>
-						</div>
-						<div class="clearfix"> </div>
-					</div>	
-				</div>
-				<div role="tabpanel" class="tab-pane fade" id="award" aria-labelledby="award-tab">
-					<div class="tab_img">
-						<div class="col-md-3 col-sm-6 col-xs-6 portfolio-grids" data-aos="zoom-in">
-							<a href="<?php echo URL_ASSETS;?>images/b4.jpg" class="b-link-stripe b-animate-go lightninBox" data-lb-group="5">
-								<img src="<?php echo URL_ASSETS;?>images/b4.jpg" class="img-responsive zoom-img" alt="w3ls"/>
-								<div class="b-wrapper">
-									<i class="fa fa-search-plus" aria-hidden="true"></i>
-									<h5>Flat</h5>
-									<p>Neque porro quisquam est.</p>
-								</div>
-							</a>
-						</div>
-						<div class="col-md-3 col-sm-6 col-xs-6 portfolio-grids" data-aos="zoom-in">
-							<a href="<?php echo URL_ASSETS;?>images/b5.jpg" class="b-link-stripe b-animate-go lightninBox" data-lb-group="5">
-								<img src="<?php echo URL_ASSETS;?>images/b5.jpg" class="img-responsive zoom-img" alt="w3ls"/>
-								<div class="b-wrapper">
-									<i class="fa fa-search-plus" aria-hidden="true"></i>
-									<h5>Flat</h5>
-									<p>Neque porro quisquam est.</p>
-								</div>
-							</a>
-						</div>
-						<div class="col-md-3 col-sm-6 col-xs-6 portfolio-grids" data-aos="zoom-in">
-							<a href="<?php echo URL_ASSETS;?>images/b1.jpg" class="b-link-stripe b-animate-go lightninBox" data-lb-group="5">
-								<img src="<?php echo URL_ASSETS;?>images/b1.jpg" class="img-responsive zoom-img" alt="w3ls"/>
-								<div class="b-wrapper">
-									<i class="fa fa-search-plus" aria-hidden="true"></i>
-									<h5>Flat</h5>
-									<p>Neque porro quisquam est.</p>
-								</div>
-							</a>
-						</div>
-						<div class="col-md-3 col-sm-6 col-xs-6 portfolio-grids" data-aos="zoom-in">
-							<a href="<?php echo URL_ASSETS;?>images/b2.jpg" class="b-link-stripe b-animate-go lightninBox" data-lb-group="5">
-								<img src="<?php echo URL_ASSETS;?>images/b2.jpg" class="img-responsive zoom-img" alt="w3ls"/>
-								<div class="b-wrapper">
-									<i class="fa fa-search-plus" aria-hidden="true"></i>
-									<h5>Flat</h5>
-									<p>Neque porro quisquam est.</p>
-								</div>
-							</a>
-						</div>
-						<div class="clearfix"> </div>
-					</div>	
-				</div>
-			</div>
-		</div>
-	</div>	
-</section>
-<!-- /Portfolio section -->	
+						<div class="col-md-5 col-md-push-1 animate-box" data-animate-effect="fadeInRight">
+							<div class="form-wrap">
+								<div class="tab">
+									
+									<div class="tab-content">
+										<div class="tab-content-inner active" data-content="signup">
+											<h3><center>Pesan Tiketmu</center></h3>
+											<form action="<?php echo base_url();?>Travelitacon/cari" method="post">
+												<div class="row form-group">
+													<div class="col-md-12">
+														<label for="destination">Keberangkatan</label>
+														<select name="rute_form" id="rute_form" class="form-control">
+															<option value="Jakarta">Jakarta</option>
+															<option value="Semarang">Semarang</option>
+															<option value="Yogyakarta">Yogyakarta</option>
+															<option value="Surabaya">Surabaya</option>
+															<option value="Bali">Bali</option>
+															<option value="Sabang">Sabang</option>
+															<option value="Merauke">Merauke</option>
+															<option value="Jayapura">Jayapura</option>
+															<option value="Pontianak">Pontianak</option>
+															<option value="Bandung">Bandung</option>
+														</select>
+													</div>
+												</div>
+												<div class="row form-group">
+													<div class="col-md-12">
+														<label for="destination">Tujuan</label>
+														<select name="rute_to" id="rute_to" class="form-control">
+															<option value="Jakarta">Jakarta</option>
+															<option value="Semarang">Semarang</option>
+															<option value="Yogyakarta">Yogyakarta</option>
+															<option value="Surabaya">Surabaya</option>
+															<option value="Bali">Bali</option>
+															<option value="Sabang">Sabang</option>
+															<option value="Merauke">Merauke</option>
+															<option value="Jayapura">Jayapura</option>
+															<option value="Pontianak">Pontianak</option>
+															<option value="Bandung">Bandung</option>
+														</select>
+													</div>
+												</div>
+												<!--
+												<div class="row form-group">
+													<div class="col-md-12">
+														<label for="date-start">Tanggal</label>
+														<input type="text" id="date-start" class="form-control">
+													</div>
+												</div>-->
 
-<!-- Testimonials -->
-<div class="customer" id="customer">
-		<div class="heading">
-			<h3>Testimonials</h3>
-			<p>Lorem ipsum dolor sit amet, Sed ut perspiciatis unde omnis iste natus error sit voluptatem </p>
-		</div>
-	<div class="container">
-			<div class="customer-grids">
-				<ul id="flexiselDemo1">			
-					<li>
-						<div class="client-img">
-							<img src="<?php echo URL_ASSETS;?>images/t1.jpg" alt="" />
-						</div>
-						<div class="customer-grid">
-							<h4>David Elton</h4>
-							<p> Cras aliquam ligula et netus et malesuada fames ac turpis egestas.  
-								Donec auctorma gnaid purus lacinia hendrerit netus.</p>
-						</div>
-					</li>
-					<li>
-						<div class="client-img">
-							<img src="<?php echo URL_ASSETS;?>images/t2.jpg" alt="" />
-						</div>
-						<div class="customer-grid">
-							<h4>Helena Gaye</h4>
-							<p> Cras aliquam ligula id felis rhoncus facilisis. fames ac turpis egestas.  
-								Donec auctorma gnaid purus lacinia hendrerit felis.</p>
-						</div>
-					</li>
-					<li>
-						<div class="client-img">
-							<img src="<?php echo URL_ASSETS;?>images/t3.jpg" alt="" />
-						</div>
-						<div class="customer-grid">
-							<h4>Jawel Slash</h4>
-							<p> Cras aliquam ligula id felis rhoncus facilisis. Pellentesque habitant 
-								morbitristiquesen ectus et netus et malesuada fames.</p>
-						</div>
-					</li>
-				</ul>
-			</div>
-	</div>
-</div>
-<!-- //Testimonials -->
+												<div class="row form-group">
+													<div class="col-md-12">
+														<input type="submit" class="btn btn-primary btn-block" value="Cari">
+													</div>
+												</div>
+											</form>	
+										</div>
 
-<!-- faq's -->
-<div class="faq">
-	<div class="container">
-		<div class="about-w3ls-row">
-			<div class="heading ">
-				<h3>Faq's</h3>
-			</div>
-			<div class="col-md-4 about-left">
-				<div class="about-w3layouts-pic">
-					<img src="<?php echo URL_ASSETS;?>images/faq1.png" alt=""/>	
-				</div> 
-			</div>
-				<div class="col-md-8 about-right">
-				<!-- history -->
-					<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true"> 
-						<div class="panel panel-default">
-							<div class="panel-heading" role="tab" id="headingOne">
-								<h4 class="panel-title asd">
-									<a class="pa_italic" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-										<span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span> How to Start your business? 
-									</a>
-								</h4>
-							</div>
-							<div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-								<div class="panel-body panel_text">
-									Sed lectus tellus sodales id elit a, feugiat porttitor nulla. Sed porta magna vitae nisl vulputate lacinia. Morbi malesuada sollicitudin tortor, vitae pharetra nunc lacinia eget leo sodales adipiscing.
-								</div>
-							</div>
-						</div>
-						<div class="panel panel-default">
-							<div class="panel-heading" role="tab" id="headingTwo">
-								<h4 class="panel-title asd">
-									<a class="pa_italic collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-										<span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span> How to Plan your future with buildings?
-									</a>
-								</h4>
-							</div>
-							<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-								<div class="panel-body panel_text">
-									Feugiat porttitor nulla Sed lectus tellus sodales id elit a,  Sed porta magna vitae nisl vulputate lacinia. Morbi malesuada sollicitudin tortor, vitae pharetra nunc lacinia eget leo sodales adipiscing.
-								</div>
-							</div>
-						</div>
-						<div class="panel panel-default">
-							<div class="panel-heading" role="tab" id="headingThree">
-							  <h4 class="panel-title asd">
-								<a class="pa_italic collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-									<span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span> Why we Create real estate?
-								</a>
-							  </h4>
-							</div>
-							<div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-								<div class="panel-body panel_text">
-									Morbi malesuada sollicitudin tortor, vitae pharetra nunc lacinia eget leo sodales adipiscing. Sed lectus tellus, sodales id elit a, feugiat porttitor nulla. Sed porta magna vitae nisl vulputate lacinia. 
-								</div>
-							</div>
-						</div>
-						<div class="panel panel-default">
-							<div class="panel-heading" role="tab" id="headingFour">
-							  <h4 class="panel-title asd">
-								<a class="pa_italic collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-									<span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span> why we choose to Enjoy housing boards ?
-								</a>
-							  </h4>
-							</div>
-							<div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
-								<div class="panel-body panel_text">
-									Sed lectus tellus, sodales id elit a, feugiat porttitor nulla. Sed porta magna vitae nisl vulputate lacinia. Morbi malesuada sollicitudin tortor, vitae pharetra nunc lacinia eget leo sodales adipiscing.
+										
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-					<!-- //history --> 
+							
+					
 				</div>
-				<div class="clearfix"> </div> 
-		</div>
-	</div>
-</div>
-<!-- //faq's -->
-
-<!-- footer -->
-<div class="footer">
-		<div class="container">
-			<div class="social">
-				<ul>
-					<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-					<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-					<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-					<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-				</ul>
 			</div>
-			<div class="border"></div>
+		</div>
+	</header>
+	
+	<div class="gtco-section">
+		<div class="gtco-container">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 text-center gtco-heading">
+					<h2>Tujuan Favorit</h2>
+					<p>Tempat-tempat Favorit untuk liburan kamu selanjutnya</p>
+				</div>
+			</div>
+			<div class="row">
+
+				<div class="col-lg-4 col-md-4 col-sm-6">
+					<a href="<?php echo URL_ASSETS;?>front/images/3.jpg" class="fh5co-card-item image-popup">
+						<figure>
+							<div class="overlay"><i class="ti-plus"></i></div>
+							<img src="<?php echo URL_ASSETS;?>front/images/3.jpg" alt="Image" class="img-responsive">
+						</figure>
+						<div class="fh5co-text">
+							<h2>Danau Toba, Jawa Barat</h2>
+							<p>Far far away, behind the word mountains, far from the countries Vokalia..</p>
+							<p><span class="btn btn-primary">Schedule a Trip</span></p>
+						</div>
+					</a>
+				</div>
+				<div class="col-lg-4 col-md-4 col-sm-6">
+					<a href="<?php echo URL_ASSETS;?>front/images/4.jpg" class="fh5co-card-item image-popup">
+						<figure>
+							<div class="overlay"><i class="ti-plus"></i></div>
+							<img src="<?php echo URL_ASSETS;?>front/images/4.jpg" alt="Image" class="img-responsive">
+						</figure>
+						<div class="fh5co-text">
+							<h2>Gunung Bromo, Jawa Barat</h2>
+							<p>Far far away, behind the word mountains, far from the countries Vokalia..</p>
+							<p><span class="btn btn-primary">Schedule a Trip</span></p>
+						</div>
+					</a>
+				</div>
+				<div class="col-lg-4 col-md-4 col-sm-6">
+					<a href="<?php echo URL_ASSETS;?>front/images/5.jpg" class="fh5co-card-item image-popup">
+						<figure>
+							<div class="overlay"><i class="ti-plus"></i></div>
+							<img src="<?php echo URL_ASSETS;?>front/images/5.jpg" alt="Image" class="img-responsive">
+						</figure>
+						<div class="fh5co-text">
+							<h2>Tanah Lot, Bali</h2>
+							<p>Far far away, behind the word mountains, far from the countries Vokalia..</p>
+							<p><span class="btn btn-primary">Schedule a Trip</span></p>
+						</div>
+					</a>
+				</div>
+
+			</div>
 		</div>
 	</div>
-<!-- //footer -->
+	
+	<div id="gtco-features">
+		<div class="gtco-container">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 text-center gtco-heading animate-box">
+					<h2>Tahapan Pemesanan</h2>
+					<p>3 langkah mudah memesan tiket pesawat dengan TRAVELITA.</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4 col-sm-6">
+					<div class="feature-center animate-box" data-animate-effect="fadeIn">
+						<span class="icon">
+							<i>1</i>
+						</span>
+						<h3>Cari Penerbangan</h3>
+						<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-6">
+					<div class="feature-center animate-box" data-animate-effect="fadeIn">
+						<span class="icon">
+							<i>2</i>
+						</span>
+						<h3>Masukkan Data Pribadi</h3>
+						<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-6">
+					<div class="feature-center animate-box" data-animate-effect="fadeIn">
+						<span class="icon">
+							<i>3</i>
+						</span>
+						<h3>Verifikasi Pemesanan</h3>
+						<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
+					</div>
+				</div>
+				
 
- 
-<!-- js -->
-<script type="text/javascript" src="<?php echo URL_ASSETS;?>js/jquery-2.1.4.min.js"></script>
-<!-- for bootstrap working -->
-	<script src="<?php echo URL_ASSETS;?>js/bootstrap.js"></script>
-<!-- //for bootstrap working -->
-<!-- //js -->
+			</div>
+		</div>
+	</div>
+
+	<footer id="gtco-footer" role="contentinfo">
+		<div class="gtco-container">
+
+			<div class="row row-p">
+				<div class="col-md-12">
+					<p class="pull-left">
+						<small class="block">&copy; 2018 Travelita. Flight booking.</small> 
+					</p>
+					<p class="pull-right">
+						<ul class="gtco-social-icons pull-right">
+							<li><a href="#"><i class="icon-twitter"></i></a></li>
+							<li><a href="#"><i class="icon-facebook"></i></a></li>
+							<li><a href="#"><i class="icon-linkedin"></i></a></li>
+							<li><a href="#"><i class="icon-dribbble"></i></a></li>
+						</ul>
+					</p>
+				</div>
+			</div>
+
+		</div>
+	</footer>
+	<!-- </div> -->
+
+	</div>
+
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+	</div>
+	
+	<!-- jQuery -->
+	<script src="<?php echo URL_ASSETS;?>front/js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="<?php echo URL_ASSETS;?>front/js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="<?php echo URL_ASSETS;?>front/js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="<?php echo URL_ASSETS;?>front/js/jquery.waypoints.min.js"></script>
+	<!-- Carousel -->
+	<script src="<?php echo URL_ASSETS;?>front/js/owl.carousel.min.js"></script>
+	<!-- countTo -->
+	<script src="<?php echo URL_ASSETS;?>front/js/jquery.countTo.js"></script>
+
+	<!-- Stellar Parallax -->
+	<script src="<?php echo URL_ASSETS;?>front/js/jquery.stellar.min.js"></script>
+
+	<!-- Magnific Popup -->
+	<script src="<?php echo URL_ASSETS;?>front/js/jquery.magnific-popup.min.js"></script>
+	<script src="<?php echo URL_ASSETS;?>front/js/magnific-popup-options.js"></script>
+	
+	<!-- Datepicker -->
+	<script src="<?php echo URL_ASSETS;?>front/js/bootstrap-datepicker.min.js"></script>
 	
 
-<!-- for banner js file-->
- <script type="text/javascript" src="<?php echo URL_ASSETS;?>js/jquery.zoomslider.min.js"></script><!-- zoomslider js -->
-<!-- //for banner js file-->
+	<!-- Main -->
+	<script src="<?php echo URL_ASSETS;?>front/js/main.js"></script>
 
-<!-- for team slider -->
-<!-- requried-jsfiles-for owl -->
-		 <script src="js/owl.carousel.js"></script>
-			<script>
-			 $(document).ready(function() {
-					$("#owl-demo").owlCarousel({
-						 items : 4,
-						 lazyLoad : true,
-						 autoPlay : true,
-							navigation : true,
-							navigationText :  true,
-							pagination : false,
-							});
-				});
-			</script>
-<!-- //requried-jsfiles-for owl -->
-<!-- //for team slider -->
-
-<!-- js for portfolio lightbox -->
-<script src="<?php echo URL_ASSETS;?>js/jQuery.lightninBox.js"></script>
-<script type="text/javascript">
-	$(".lightninBox").lightninBox();
-</script>
-<!-- /js for portfolio lightbox -->
-
-<!-- for smooth scrolling -->
-<script src="<?php echo URL_ASSETS;?>js/SmoothScroll.min.js"></script>
-	<script type="text/javascript" src="<?php echo URL_ASSETS;?>js/move-top.js"></script>
-	<script type="text/javascript" src="<?php echo URL_ASSETS;?>js/easing.js"></script>
-	<!-- here stars scrolling icon -->
-	<script type="text/javascript">
-		$(document).ready(function() {
-			/*
-				var defaults = {
-				containerID: 'toTop', // fading element id
-				containerHoverID: 'toTopHover', // fading element hover id
-				scrollSpeed: 1200,
-				easingType: 'linear' 
-				};
-			*/
-								
-			$().UItoTop({ easingType: 'easeOutQuart' });
-								
-			});
-	</script>
-	<!-- //here ends scrolling icon -->
-<!-- //for smooth scrolling -->
-
-<!-- scrolling script -->
-<script type="text/javascript">
-	jQuery(document).ready(function($) {
-		$(".scroll").click(function(event){		
-			event.preventDefault();
-			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
-		});
-	});
-</script> 
-<!-- //scrolling script -->
-
-<!-- testimonilas slider -->
-				<script type="text/javascript">
-							$(window).load(function() {
-								$("#flexiselDemo1").flexisel({
-									visibleItems: 3,
-									animationSpeed: 1000,
-									autoPlay: true,
-									autoPlaySpeed: 3000,    		
-									pauseOnHover: true,
-									enableResponsiveBreakpoints: true,
-									responsiveBreakpoints: { 
-										portrait: { 
-											changePoint:480,
-											visibleItems: 1
-										}, 
-										landscape: { 
-											changePoint:640,
-											visibleItems:3
-										},
-										tablet: { 
-											changePoint:768,
-											visibleItems: 3
-										}
-									}
-								});
-								
-							});
-					</script>
-<script type="text/javascript" src="<?php echo URL_ASSETS;?>js/jquery.flexisel.js"></script>
-<!-- testimonilas slider -->
-
-</body>
+	</body>
 </html>
+

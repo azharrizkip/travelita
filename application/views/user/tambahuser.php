@@ -44,19 +44,22 @@
         <!-- Optionally, you can add icons to the links -->
         <li><a href="<?php base_url();?>dashboard"><i class="fa fa-home"></i> <span>Dashboard</span></a></li>
         <li><a href="<?php base_url();?>rute"><i class="fa fa-map"></i> <span>Rute Perjalanan</span></a></li>
+        <li><a href="<?php base_url();?>kota"><i class="fa fa-building"></i> <span>Kota</span></a></li>
         <li class="active"><a href="<?php base_url();?>user"><i class="fa fa-user"></i> <span>User</span></a></li>
+        <li><a href="<?php base_url();?>trans"><i class="fa fa-plane"></i> <span>Transportation</span></a></li>
         <li><a href="#"><i class="fa fa-book"></i> <span>Reservation</span></a></li>
-        <!-- <li class="treeview">
-          <a href="#"><i class="fa fa-link"></i> <span>Multilevel</span>
+        <li class="treeview">
+          <a href="#"><i class="fa fa-user"></i> <span>Profile</span>
             <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="#">Link in level 2</a></li>
-            <li><a href="#">Link in level 2</a></li>
+            <li><a href="#"><i class="fa fa-user"></i>Profil</a></li>
+            <li><a href="#"><i class="fa fa-pencil"></i>Edit Profil</a></li>
+            <li><a href="#"><i class="fa fa-clock-o"></i>Riwayat Reservasi</a></li>
           </ul>
-        </li> -->
+        </li>
       </ul>
       <!-- /.sidebar-menu -->
     </section>
@@ -121,12 +124,10 @@
               </div>
               <div class="form-group">
                 <label>Level</label>
-                <div class="input-group">
-                <input type="text" id="level" class="form-control" name="level" required>
-                  <div class="input-group-addon">
-                    <i class="fa fa-unsorted"></i>
-                  </div>
-              </div>
+                  <select name="level" id="level" class="form-control">
+                    <option>User</option>
+                    <option>Admin</option>
+                  </select>
               </div>
               <div class="form-group">
                 <input type="submit" name="Simpan" value="Simpan" class="btn btn-primary">
