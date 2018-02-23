@@ -90,7 +90,7 @@
                 <label>Username</label>
                 <div class="input-group">
                 <input type="text" id="username" class="form-control" name="username" required>
-                    <div class="input-group-addon">
+                    <div class="input-group-addon bg-orange">
                       <i class="fa fa-user"></i>
                     </div>
                 </div>
@@ -99,7 +99,7 @@
                 <label>Password</label>
                 <div class="input-group">
                 <input type="password" id="password" class="form-control" name="password" required>
-                    <div class="input-group-addon">
+                    <div class="input-group-addon bg-blue">
                       <i class="fa fa-key"></i>
                     </div>
                 </div>
@@ -108,7 +108,7 @@
                 <label>Fullname</label>
                 <div class="input-group">
                 <input type="text" id="fullname" class="form-control" name="fullname" required>
-                  <div class="input-group-addon">
+                  <div class="input-group-addon bg-aqua">
                     <i class="fa fa-text-width"></i>
                   </div>
               </div>
@@ -117,17 +117,22 @@
                 <label>Email</label>
                 <div class="input-group">
                 <input type="email" id="email" class="form-control" name="email" required>
-                    <div class="input-group-addon">
+                    <div class="input-group-addon bg-green">
                       <i class="fa fa-envelope"></i>
                     </div>
                 </div>
               </div>
               <div class="form-group">
                 <label>Level</label>
+                 <div class="input-group">
                   <select name="level" id="level" class="form-control">
                     <option>User</option>
                     <option>Admin</option>
                   </select>
+                  <div class="input-group-addon bg-purple">
+                      <i class="fa fa-user"></i>
+                    </div>
+                </div>
               </div>
               <div class="form-group">
                 <input type="submit" name="Simpan" value="Simpan" class="btn btn-primary">

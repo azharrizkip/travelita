@@ -20,8 +20,10 @@ class Travelitacon extends CI_Controller {
 	 */
 	public function index(){
 		$this->cek_sessiontrue();
-		$data['sesi'] = $this->cek_session();
-		$this->load->view('home');
+		$data = array(
+			'data_kota' => $this->model->getkota("order by id_kota asc")->result_array(),
+		);
+		$this->load->view('home', $data);
 	}
 	public function login(){
 		$this->cek_sessiontrue();
@@ -91,6 +93,7 @@ class Travelitacon extends CI_Controller {
 	function saverute(){
 		$data = array(
 			'depart_at' => $this->input->post('depart_at'),
+			'depart_date' => $this->input->post('depart_date'),
 			'rute_form' =>($this->input->post('rute_form')),
 			'rute_to' => $this->input->post('rute_to'),
 			'price' => $this->input->post('price'),
@@ -109,8 +112,11 @@ class Travelitacon extends CI_Controller {
 		$data_rute = $this->model->getrute("where id_rute ='$kode'")->result_array();
 
 		$data = array(
+			'data_trans' => $this->model->gettrans("order by transportationid asc")->result_array(),
+			'data_kota' => $this->model->getkota("order by id_kota asc")->result_array(),
 			'id_rute' => $data_rute[0]['id_rute'],
 			'depart_at' => $data_rute[0]['depart_at'],
+			'depart_date' => $data_rute[0]['depart_date'],
 			'rute_form' => $data_rute[0]['rute_form'],
 			'rute_to' => $data_rute[0]['rute_to'],
 			'price' => $data_rute[0]['price'],
@@ -122,6 +128,7 @@ class Travelitacon extends CI_Controller {
 	{
 		$this->cek_sessionfalse();
 		$depart_at = $this->input->post('depart_at');
+		$depart_date = $this->input->post('depart_date');
 		$rute_form = $this->input->post('rute_form');
 		$rute_to = $this->input->post('rute_to');
 		$price = $this->input->post('price');
@@ -130,6 +137,7 @@ class Travelitacon extends CI_Controller {
 		
 		$data = array(
 			'depart_at' => $depart_at,
+			'depart_date' => $depart_date,
 			'rute_form' => $rute_form,
 			'rute_to' => $rute_to,
 			'price' => $price,
@@ -169,25 +177,139 @@ class Travelitacon extends CI_Controller {
 //===========================================================
 	public function cari(){
 		$this->cek_sessiontrue();
-		$rute_form = $this->input->post('rute_form');
-		$rute_to = $this->input->post('rute_to');
+		$rute_form = $this->input->get('rute_form');
+		$rute_to = $this->input->get('rute_to');
+		$tanggal = $this->input->get('tanggal');
+		$penumpang = $this->input->get('penumpang');
 		$data = array(
-			'data_rute' => $this->model->getrute("where rute_form LIKE '%$rute_form%' AND rute_to LIKE '%$rute_to%'")->result_array()
+			'data_rute' => $this->model->getrutetrans("where rute_form LIKE '%$rute_form%' AND rute_to LIKE '%$rute_to%' AND depart_date LIKE '%$tanggal%' AND rute.transportationid = transportation.transportationid")->result_array(),
+			'penumpang' => $penumpang,
 		);
 		$this->load->view('cari', $data);
 	}
-	public function step1($kode = 0){
-		$data_rute = $this->model->getrute("where id_rute ='$kode'")->result_array();
-
+	public function step1($kode = 0, $kode1 = 0){
+		$data_rute = $this->model->getrutetrans("where id_rute ='$kode'")->result_array();
+		$tkursi = $this->model->tot_kursi("where id_rute ='$kode'")->result_array();
+		$data_trans = $this->model->getrutetrans("where rute.id_rute ='$kode' AND transportation.transportationid = rute.transportationid")->result_array();
 		$data = array(
+			'penumpang' => $kode1,
 			'id_rute' => $data_rute[0]['id_rute'],
 			'depart_at' => $data_rute[0]['depart_at'],
+			'depart_date' => $data_rute[0]['depart_date'],
 			'rute_form' => $data_rute[0]['rute_form'],
 			'rute_to' => $data_rute[0]['rute_to'],
 			'price' => $data_rute[0]['price'],
 			'transportationid' => $data_rute[0]['transportationid'],
+			'plane_name' => $data_trans[0]['plane_name'],
+			'logo' => $data_trans[0]['logo'],
+			'seat_qty' => $data_trans[0]['seat_qty'],
+			'code' => $data_trans[0]['code'],
+			'data_res' => $this->model->getres("where id_rute ='$kode'")->result_array(),
+			'tot_kursi'=> $tkursi[0]['tot_kursi'],
 			);
 		$this->load->view('step1', $data);
+	}
+	public function saveres(){
+		$id_rute = $this->input->post('id_rute');
+		$name = $this->input->post('name');
+		$phone =  $this->input->post('phone');
+		$seat_code =  $this->input->post('seat_code');
+		$reservation_code =  $this->input->post('reservation_code');
+		$data = array(
+			'name' => $this->input->post('name'),
+			'address' =>$this->input->post('address'),
+			'phone' => $this->input->post('phone'),
+			'gender' => $this->input->post('gender'),
+			'email' => $this->input->post('email'),
+			);
+		$result = $this->model->Simpan('customer', $data);
+		date_default_timezone_set("Asia/Jakarta");
+		$data_cus = $this->model->getcustomer("where name ='$name' AND phone ='$phone'")->result_array();
+		$data2 = array(
+			'reservation_code'=> $this->input->post('reservation_code'),
+			'reservation_at' => date("G:i:s"),
+			'reservation_date' => date('Y-m-d'),
+			'seat_code' => $this->input->post('seat_code'),
+			'id_customer' => $data_cus[0]['id_customer'],
+			'id_rute' => $id_rute,
+			'price' => $this->input->post('price'),
+			'depart_at' => $this->input->post('depart_at'),
+		);
+		$result = $this->model->Simpan('reservation', $data2);
+		$data_ress = $this->model->getreservation("where reservation_code ='$reservation_code' AND seat_code ='$seat_code'")->result_array();
+		$id_reservation = $data_ress[0]['id_reservation'];
+		if($result == 1){
+			$this->session->set_flashdata("sukses", "<div class='alert alert-success'><strong>Simpan data BERHASIL dilakukan</strong></div>");
+			header('location:'.base_url().'travelitacon/step2/'.$id_reservation);
+		}else{
+			$this->session->set_flashdata("alert", "<div class='alert alert-danger'><strong>Simpan data GAGAL di lakukan</strong></div>");
+			header('location:'.base_url().'travelitacon/step1');
+		}
+	}
+	public function step2($kode = 0){
+		$data_ress = $this->model->getreservation("where id_reservation ='$kode' AND customer.id_customer = reservation.id_customer AND rute.id_rute = reservation.id_rute AND transportation.transportationid = rute.transportationid")->result_array();
+		$id_rute = $data_ress[0]['id_rute'];
+		$data = array(
+			'id_rute' => $data_ress[0]['id_rute'],
+			'depart_at' => $data_ress[0]['depart_at'],
+			'depart_date' => $data_ress[0]['depart_date'],
+			'rute_form' => $data_ress[0]['rute_form'],
+			'rute_to' => $data_ress[0]['rute_to'],
+			'price' => $data_ress[0]['price'],
+			'transportationid' => $data_ress[0]['transportationid'],
+			'plane_name' => $data_ress[0]['plane_name'],
+			'name' => $data_ress[0]['name'],
+			'address' => $data_ress[0]['address'],
+			'phone' => $data_ress[0]['phone'],
+			'gender' => $data_ress[0]['gender'],
+			'email' => $data_ress[0]['email'],
+			'reservation_code' => $data_ress[0]['reservation_code'],
+			'logo' => $data_ress[0]['logo'],
+			'seat_qty' => $data_ress[0]['seat_qty'],
+			'seat_code' => $data_ress[0]['seat_code'],
+			'code' => $data_ress[0]['code'],
+			'data_res' => $this->model->getres("where id_rute ='$id_rute'")->result_array(),
+			);
+		$this->load->view('step2', $data);
+	}
+	public function step3(){
+		$this->load->view('step3');
+	}
+	public function step4(){
+		$this->load->view('step4');
+	}
+	public function cekreservasi(){
+		$email = $this->input->post('email');
+		$reservation_code = $this->input->post('reservation_code');
+		$cek = $this->model->cek_res("where customer.email = '$email' AND reservation.reservation_code = '$reservation_code'")->result_array();
+				$cek_res = $cek[0]['cek_res'];
+		if ($cek_res=='0') {
+			$this->load->view('step4');
+		}else{
+		$data_ress = $this->model->getreservation("where customer.email = '$email' AND reservation.reservation_code = '$reservation_code'")->result_array();
+		$data = array(
+			'id_rute' => $data_ress[0]['id_rute'],
+			'depart_at' => $data_ress[0]['depart_at'],
+			'depart_date' => $data_ress[0]['depart_date'],
+			'rute_form' => $data_ress[0]['rute_form'],
+			'rute_to' => $data_ress[0]['rute_to'],
+			'price' => $data_ress[0]['price'],
+			'transportationid' => $data_ress[0]['transportationid'],
+			'plane_name' => $data_ress[0]['plane_name'],
+			'name' => $data_ress[0]['name'],
+			'address' => $data_ress[0]['address'],
+			'phone' => $data_ress[0]['phone'],
+			'gender' => $data_ress[0]['gender'],
+			'email' => $data_ress[0]['email'],
+			'reservation_code' => $data_ress[0]['reservation_code'],
+			'logo' => $data_ress[0]['logo'],
+			'seat_qty' => $data_ress[0]['seat_qty'],
+			'seat_code' => $data_ress[0]['seat_code'],
+			'code' => $data_ress[0]['code'],
+			'cek_res'=> $cek[0]['cek_res'],
+			);
+		$this->load->view('step5', $data);
+		}
 	}
 //===========================================================
 	public function user(){

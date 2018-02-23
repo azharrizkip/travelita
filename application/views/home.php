@@ -51,13 +51,16 @@
 
 	<!-- Modernizr JS -->
 	<script src="<?php echo URL_ASSETS;?>front/js/modernizr-2.6.2.min.js"></script>
+  <!-- Font Awesome -->
+  
+    <link rel="stylesheet" href="<?php echo URL_ASSETS;?>admin/bower_components/select2/dist/css/select2.min.css">
 	<!-- FOR IE9 below -->
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
 <style type="text/css">
 .row-mt-10em {
-    margin-top: 12em;
+    margin-top: 9em;
   }
 @media screen and (max-width: 768px) {
   .row-mt-10em {
@@ -66,13 +69,52 @@
   }
 }
 #gtco-header .mt-text {
-  margin-top: 6em;
+  margin-top: 8em;
 }
 @media screen and (max-width: 768px) {
   #gtco-header .mt-text {
     margin-top: 0;
   }
 }
+select{
+    background-color: black;
+}
+.select2{
+  display: block;
+  width: 100%;
+  font-size: 14px;
+  line-height: 1.42857143;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  box-shadow: none;
+  background: transparent;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  height: 46px;
+  font-size: 16px;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+  -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+       -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+          transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+.select2:focus {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
+          box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
+}
+.select2-container--default .select2-selection--single {
+    border: none;
+    background-color: transparent;
+    height: 45px;
+    padding-top: 5px;
+    color: #555;
+}
+
+
+
 </style>
 	</head>
 	<body>
@@ -88,7 +130,7 @@
 			
 			<div class="row">
 				<div class="col-sm-4 col-xs-12">
-					<div id="gtco-logo"><a href="index.html">Travelita	 <em>.</em></a></div>
+					<div id="gtco-logo"><a href="<?php echo base_url(); ?>travelitacon/index">Travelita	 <em>.</em></a></div>
 				</div>
 				<div class="col-xs-8 text-right menu-1">
 					<ul>
@@ -110,58 +152,53 @@
 					
 
 					<div class="row row-mt-10em">
-						<div class="col-md-7 mt-text animate-box" data-animate-effect="fadeInUp">
-							<h1 style="font-family: Comic Sans MS;">Liburan kemanapun dan Kapanpun<em>!</em></h1>	
+						<div class="col-md-6 mt-text animate-box" data-animate-effect="fadeInUp">
+							<h1 style="font-family: "Lato", Arial, sans-serif;">Liburan kemanapun dan Kapanpun<em>!</em></h1>	
 						</div>
-						<div class="col-md-5 col-md-push-1 animate-box" data-animate-effect="fadeInRight">
+						<div class="col-md-6 col-md-push-1 animate-box" data-animate-effect="fadeInRight">
 							<div class="form-wrap">
 								<div class="tab">
 									
 									<div class="tab-content">
 										<div class="tab-content-inner active" data-content="signup">
 											<h3><center>Pesan Tiketmu</center></h3>
-											<form action="<?php echo base_url();?>Travelitacon/cari" method="post">
+											<form action="<?php echo base_url();?>Travelitacon/cari" method="get">
 												<div class="row form-group">
-													<div class="col-md-12">
+													<div class="col-md-6 col-sm-12">
 														<label for="destination">Keberangkatan</label>
-														<select name="rute_form" id="rute_form" class="form-control">
-															<option value="Jakarta">Jakarta</option>
-															<option value="Semarang">Semarang</option>
-															<option value="Yogyakarta">Yogyakarta</option>
-															<option value="Surabaya">Surabaya</option>
-															<option value="Bali">Bali</option>
-															<option value="Sabang">Sabang</option>
-															<option value="Merauke">Merauke</option>
-															<option value="Jayapura">Jayapura</option>
-															<option value="Pontianak">Pontianak</option>
-															<option value="Bandung">Bandung</option>
+														<select name="rute_form" style="background-color: black; color: red; padding-top: 20px;" id="rute_form" class="form-control select2">
+															<?php $no=0; foreach($data_kota as $row) { $no++ ?>
+                  											<option><?php echo $row['kota']?></option>
+                  											<?php } ?>
 														</select>
 													</div>
-												</div>
-												<div class="row form-group">
-													<div class="col-md-12">
+													<div class="col-md-6 col-sm-12">
 														<label for="destination">Tujuan</label>
-														<select name="rute_to" id="rute_to" class="form-control">
-															<option value="Jakarta">Jakarta</option>
-															<option value="Semarang">Semarang</option>
-															<option value="Yogyakarta">Yogyakarta</option>
-															<option value="Surabaya">Surabaya</option>
-															<option value="Bali">Bali</option>
-															<option value="Sabang">Sabang</option>
-															<option value="Merauke">Merauke</option>
-															<option value="Jayapura">Jayapura</option>
-															<option value="Pontianak">Pontianak</option>
-															<option value="Bandung">Bandung</option>
+														<select name="rute_to" id="rute_to" class="form-control select2">
+															<?php $no=0; foreach($data_kota as $row) { $no++ ?>
+                  											<option><?php echo $row['kota']?></option>
+                  											<?php } ?>
 														</select>
 													</div>
 												</div>
-												<!--
 												<div class="row form-group">
 													<div class="col-md-12">
 														<label for="date-start">Tanggal</label>
-														<input type="text" id="date-start" class="form-control">
+														<input type="text" id="date-start" name="tanggal" class="form-control">
 													</div>
-												</div>-->
+												</div>
+												<div class="row form-group">
+													<div class="col-md-12">
+														<label for="people">Penumpang</label>
+														<select class="form-control" name="penumpang">
+															<option value="1">1</option>
+															<option value="2">2</option>
+															<option value="3">3</option>
+															<option value="4">4</option>
+														</select>
+													</div>
+												</div>
+
 
 												<div class="row form-group">
 													<div class="col-md-12">
@@ -335,7 +372,17 @@
 
 	<!-- Main -->
 	<script src="<?php echo URL_ASSETS;?>front/js/main.js"></script>
+<script src="<?php echo URL_ASSETS;?>admin/bower_components/select2/dist/js/select2.full.min.js"></script>
+<!-- Page script -->
+<script>
+  $(function () {
+    //Initialize Select2 Elements
+    $('.select2').select2()
 
+    //Datemask dd/mm/yyyy
+
+  })
+</script>
 	</body>
 </html>
 

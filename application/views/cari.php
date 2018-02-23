@@ -1,106 +1,208 @@
-<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
-<!--===============================================================================================-->
-  <link rel="stylesheet" type="text/css" href="<?php echo URL_ASSETS;?>table/vendor/bootstrap/css/bootstrap.min.css">
-<!--===============================================================================================-->
-  <link rel="stylesheet" type="text/css" href="<?php echo URL_ASSETS;?>table/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-<!--===============================================================================================-->
-  <link rel="stylesheet" type="text/css" href="<?php echo URL_ASSETS;?>table/vendor/animate/animate.css">
-<!--===============================================================================================-->
-  <link rel="stylesheet" type="text/css" href="<?php echo URL_ASSETS;?>table/vendor/select2/select2.min.css">
-<!--===============================================================================================-->
-  <link rel="stylesheet" type="text/css" href="<?php echo URL_ASSETS;?>table/vendor/perfect-scrollbar/perfect-scrollbar.css">
-<!--===============================================================================================-->
-  <link rel="stylesheet" type="text/css" href="<?php echo URL_ASSETS;?>table/css/util.css">
-  <link rel="stylesheet" type="text/css" href="<?php echo URL_ASSETS;?>table/css/main.css">
+<!DOCTYPE HTML>
+<!--
+  Aesthetic by gettemplates.co
+  Twitter: http://twitter.com/gettemplateco
+  URL: http://gettemplates.co
+-->
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Booking! Travelita</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Free HTML5 Website Template by GetTemplates.co" />
+  <meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
+  <meta name="author" content="GetTemplates.co" />
+
+    <!-- Facebook and Twitter integration -->
+  <meta property="og:title" content=""/>
+  <meta property="og:image" content=""/>
+  <meta property="og:url" content=""/>
+  <meta property="og:site_name" content=""/>
+  <meta property="og:description" content=""/>
+  <meta name="twitter:title" content="" />
+  <meta name="twitter:image" content="" />
+  <meta name="twitter:url" content="" />
+  <meta name="twitter:card" content="" />
+
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+  
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="<?php echo URL_ASSETS;?>front/css/animate.css">
+  <!-- Icomoon Icon Fonts-->
+  <link rel="stylesheet" href="<?php echo URL_ASSETS;?>front/css/icomoon.css">
+  <!-- Themify Icons-->
+  <link rel="stylesheet" href="<?php echo URL_ASSETS;?>front/css/themify-icons.css">
+  <!-- Bootstrap  -->
+  <link rel="stylesheet" href="<?php echo URL_ASSETS;?>front/css/bootstrap.css">
+
+  <!-- Magnific Popup -->
+  <link rel="stylesheet" href="<?php echo URL_ASSETS;?>front/css/magnific-popup.css">
+
+  <!-- Magnific Popup -->
+  <link rel="stylesheet" href="<?php echo URL_ASSETS;?>front/css/bootstrap-datepicker.min.css">
+
+  <!-- Owl Carousel  -->
+  <link rel="stylesheet" href="<?php echo URL_ASSETS;?>front/css/owl.carousel.min.css">
+  <link rel="stylesheet" href="<?php echo URL_ASSETS;?>front/css/owl.theme.default.min.css">
+
+  <!-- Theme style  -->
+  <link rel="stylesheet" href="<?php echo URL_ASSETS;?>front/css/style2.css">
+
+  <!-- Modernizr JS -->
+  <script src="<?php echo URL_ASSETS;?>front/js/modernizr-2.6.2.min.js"></script>
+  <!-- FOR IE9 below -->
+  <!--[if lt IE 9]>
+  <script src="js/respond.min.js"></script>
+  <![endif]-->
 <style type="text/css">
-.column1 {
-  width: 8%;
-  padding-left: 40px;
+.gtco-cover.gtco-cover-sm {
+  height: 300px;
+}
+@media screen and (max-width: 768px) {
+  .gtco-cover.gtco-cover-sm {
+    height: 300px;
+  }
 }
 
-.column2 {
-  width: 13%;
+.gtco-nav{
+  position: fixed;
+  background-color: white;
+}
+.gtco-nav a {
+  padding: 5px 10px;
+  color: black;
+}
+.gtco-cover .row{
+  margin-bottom: 50px;
+}
+.gtco-nav ul li a {
+  font-size: 16px;
+  padding: 30px 10px;
+  color: black;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
 }
 
-.column3 {
-  width: 15%;
-}
-
-.column4 {
-  width: 15%;
-}
-
-.column5 {
-  width: 13%;
-}
-.column6 {
-  width: 10%;
-}
-.column7 {
-  width: 10%;
-}
 </style>
-<div class="container-table100" style="background-image: url(<?php echo URL_ASSETS;?>front/images/2.jpg); 
-  background-size: cover;">
-<div class="wrap-table100">
-<div class="table100 ver3 m-b-110">
-          <div class="table100-head">
-            <table>
-              <thead>
-                <tr class="row100 head">
-                  <th class="cell100 column1">No.</th>
-                  <th class="cell100 column2">Waktu Keberangkatan</th>
-                  <th class="cell100 column3">Keberangkatan</th>
-                  <th class="cell100 column4">Tujuan</th>
-                  <th class="cell100 column5">Harga</th>
-                  <th class="cell100 column6">Id Pesawat</th>
-                  <th class="cell100 column7">Aksi</th>
-                </tr>
-              </thead>
-            </table>
-          </div>
-
-          <div class="table100-body js-pscroll">
-            <table>
-              <tbody>
-                <?php $no=0; foreach($data_rute as $row) { $no++ ?>
-                        <tr>
-                          <td class="cell100 column1"><?php echo $no; ?></td>
-                          <td class="cell100 column2"><?php echo $row['depart_at']; ?></td>
-                          <td class="cell100 column3"><?php echo $row['rute_form']; ?></td>
-                          <td class="cell100 column4"><?php echo $row['rute_to']; ?></td>
-                          <td class="cell100 column5">Rp <?php echo $row['price']; ?></td>
-                          <td class="cell100 column6"><?php echo $row['transportationid']; ?></td>
-                          <td class="cell100 column7">
-                              <a href="<?php echo base_url(); ?>travelitacon/step1/<?php echo $row['id_rute']; ?>" class="btn btn-primary"><i class="fa fa-plane"></i> Pesan</a>
-                          </td>
-                        </tr>
-                        <?php } ?>
-                      </tbody>
-              </tbody>
-            </table>
-          </div>
+  </head>
+  <body>
+    
+  <div class="gtco-loader"></div>
+  
+  <div id="page">
+  
+  <!-- <div class="page-inner"> -->
+  <nav class="gtco-nav" role="navigation">
+    <div class="gtco-container-header">
+      
+      <div class="row">
+        <div class="col-sm-4 col-xs-12">
+          <div id="gtco-logo"><a href="<?php echo base_url(); ?>travelitacon/index">Travelita <em>.</em></a></div>
+        </div>
+        <div class="col-xs-8 text-right menu-1">
+          <ul>
+            <li style="color: #09C6AB;"><b>Cari Penerbangan</b></li>
+            <li style="padding-left: 20px;">Data Pribadi</li>
+            <li style="padding-left: 20px;">Verifikasi</li>
+          </ul> 
         </div>
       </div>
-        </div>
-  <script src="<?php echo URL_ASSETS;?>table/vendor/jquery/jquery-3.2.1.min.js"></script>
-<!--===============================================================================================-->
-  <script src="<?php echo URL_ASSETS;?>table/vendor/bootstrap/js/popper.js"></script>
-  <script src="<?php echo URL_ASSETS;?>table/vendor/bootstrap/js/bootstrap.min.js"></script>
-<!--===============================================================================================-->
-  <script src="<?php echo URL_ASSETS;?>table/vendor/select2/select2.min.js"></script>
-<!--===============================================================================================-->
-  <script src="<?php echo URL_ASSETS;?>table/vendor/perfect-scrollbar/perfect-scrollbar.min.js"></script>
-  <script>
-    $('.js-pscroll').each(function(){
-      var ps = new PerfectScrollbar(this);
-
-      $(window).on('resize', function(){
-        ps.update();
-      })
-    });
       
-    
-  </script>
-<!--===============================================================================================-->
-  <script src="<?php echo URL_ASSETS;?>table/js/main.js"></script>
+    </div>
+  </nav>
+  
+  <header id="gtco-header" class="gtco-cover gtco-cover-sm" role="banner" style="background-image: url(<?php echo URL_ASSETS;?>front/images/4.jpg); background-attachment:fixed;">
+    <div class="overlay"></div>
+    <div class="gtco-container">
+      <div class="row">
+        <div class="col-md-12 col-md-offset-0 text-left">
+            <div class="col-md-12 mt-text animate-box" data-animate-effect="fadeInUp">
+              <center><span class="intro-text-small">Travelita Flight</span>
+              <h1 style="font-family: Comic Sans MS;">Penerbangan dari <?php echo $this->input->get('rute_form'); ?> ke <?php echo $this->input->get('rute_to'); ?></h1></center>  
+            </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  
+  
+  <div class="gtco-section">
+    <div class="gtco-container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="table-responsive">
+          <table id="example2" class="table table-striped table-hover">
+                <thead>
+                <tr>
+                  <th><center>No.</center></th>
+                  <th><center>Tanggal</center></th>
+                  <th><center>Waktu Keberangkatan</center></th>
+                  <th><center>Keberangkatan</center></th>
+                  <th><center>Tujuan</center></th>
+                  <th><center>Harga</center></th>
+                  <!--<th><center>Total</center></th>-->
+                  <th><center>Pesawat</center></th>
+                  <th>&nbsp</th>
+                </tr>
+                </thead>
+                <tbody>
+                <?php $no=0; foreach($data_rute as $row) { $no++ ?>
+                <tr>
+                  <td><center><?php echo $no; ?></center></td>
+                  <td><center><?php echo $row['depart_date']; ?></center></td>
+                  <td><center><?php echo $row['depart_at']; ?></center></td>
+                  <td><center><?php echo $row['rute_form']; ?></center></td>
+                  <td><center><?php echo $row['rute_to']; ?></center></td>
+                  <td><center>Rp <?php echo number_format($row['price'],2); ?></center></td>
+                 <!-- <td><center>Rp <//?php echo $row['price']*$this->input->post('people'); ?>,00</center></td>-->
+                  <td><center><?php echo $row['plane_name']; ?></center></td>
+                  <td><a href="<?php echo base_url(); ?>travelitacon/step1/<?php echo $row['id_rute'];?>/<?php echo $penumpang;?>" class="btn btn-primary">Pesan</a></td>
+                </tr>
+                <?php } ?>
+                </tbody>
+              </table>
+              </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- </div> -->
+
+  </div>
+
+  <div class="gototop js-top">
+    <a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+  </div>
+  
+  <!-- jQuery -->
+  <script src="<?php echo URL_ASSETS;?>front/js/jquery.min.js"></script>
+  <!-- jQuery Easing -->
+  <script src="<?php echo URL_ASSETS;?>front/js/jquery.easing.1.3.js"></script>
+  <!-- Bootstrap -->
+  <script src="<?php echo URL_ASSETS;?>front/js/bootstrap.min.js"></script>
+  <!-- Waypoints -->
+  <script src="<?php echo URL_ASSETS;?>front/js/jquery.waypoints.min.js"></script>
+  <!-- Carousel -->
+  <script src="<?php echo URL_ASSETS;?>front/js/owl.carousel.min.js"></script>
+  <!-- countTo -->
+  <script src="<?php echo URL_ASSETS;?>front/js/jquery.countTo.js"></script>
+
+  <!-- Stellar Parallax -->
+  <script src="<?php echo URL_ASSETS;?>front/js/jquery.stellar.min.js"></script>
+
+  <!-- Magnific Popup -->
+  <script src="<?php echo URL_ASSETS;?>front/js/jquery.magnific-popup.min.js"></script>
+  <script src="<?php echo URL_ASSETS;?>front/js/magnific-popup-options.js"></script>
+  
+  <!-- Datepicker -->
+  <script src="<?php echo URL_ASSETS;?>front/js/bootstrap-datepicker.min.js"></script>
+  
+
+  <!-- Main -->
+  <script src="<?php echo URL_ASSETS;?>front/js/main.js"></script>
+
+  </body>
+</html>
+

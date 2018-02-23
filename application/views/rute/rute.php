@@ -92,7 +92,8 @@
                 <thead>
                 <tr>
                   <th>No.</th>
-                  <th>Waktu Keberangkatan</th>
+                  <th>Tanggal Keberang</th>
+                  <th>Waktu Keberangkatan</th>                  
                   <th>Keberangkatan</th>
                   <th>Tujuan</th>
                   <th>Harga</th>
@@ -104,6 +105,7 @@
                   <?php $no=0; foreach($data_rute as $row) { $no++ ?>
                 <tr>
                   <td><?php echo $no; ?></td>
+                  <td><?php echo $row['depart_date']; ?></td>
                   <td><?php echo $row['depart_at']; ?></td>
                   <td><?php echo $row['rute_form']; ?></td>
                   <td><?php echo $row['rute_to']; ?></td>
@@ -119,6 +121,7 @@
                 <tfoot>
                 <tr>
                   <th>No.</th>
+                  <th>Tanggal Keberang</th>
                   <th>Waktu Keberangkatan</th>
                   <th>Keberangkatan</th>
                   <th>Tujuan</th>

@@ -144,7 +144,7 @@
 						<div class="col-md-12 col-md-offset-0 text-left">
 							<div class="col-md-12 mt-text animate-box" data-animate-effect="fadeInUp">
 								<center><span class="intro-text-small">Travelita Flight</span><br>
-									<h1 style="font-family: Comic Sans MS; font-size: 35px;"><?php echo $rute_form;?> <i class="fa fa-fighter-jet"></i> <?php echo $rute_to;?></h1></center>	
+									<h1 style="font-family: Comic Sans MS;">Metode Pembayaran</h1></center>	
 								</div>
 							</div>
 						</div>
@@ -156,126 +156,48 @@
 					<div class="gtco-container">
 						<div class="row">
 							<div class="col-md-12">
+								<div class="col-md-3"></div>
 								<div class="col-md-6 animate-box">
-									<h3>Masukkan Data Pribadi</h3>
-									<form action="<?php echo base_url();?>travelitacon/saveres" method="post">
+									<!-- <form action="<//?php echo base_url();?>travelitacon/saveres" method="post"> -->
 										<div class="row form-group">
 											<div class="col-md-12">
-												<label class="sr-only" for="name">Nama</label>
-												<input type="hidden" id="id_rute" name="id_rute" class="form-control" placeholder="" value="<?php echo $id_rute; ?>">
-												<input type="hidden" id="price" name="price" class="form-control" placeholder="" value="<?php echo $price; ?>">
-												<input type="hidden" id="depart_at" name="depart_at" class="form-control" placeholder="" value="<?php echo $depart_at; ?>">
-												<input type="text" id="name" name="name" class="form-control" placeholder="Nama Anda" required>
-											</div>
-										</div>
-										<div class="row form-group">
-											<div class="col-md-12">
-												<label class="sr-only" for="address">Alamat</label>
-												<input type="text" id="address" name="address" class="form-control" placeholder="Alamat" required>
-											</div>
-
-										</div>
-										<div class="row form-group">
-											<div class="col-md-12">
-												<label class="sr-only" for="phone">No. Telp</label>
-												<input type="number" id="phone" name="phone" class="form-control" placeholder="Nomor Telepon" required>
-											</div>	
-										</div>
-
-										<div class="row form-group">
-											<div class="col-md-12">
-												<label class="sr-only" for="name">Jenis Kelamin</label>
+												<label class="sr-only" for="name">Bank</label>
 												<select name="gender" name="gender" class="form-control" required>
-													<option value="Laki-Laki">Laki-Laki</option>
-													<option value="Perempuan">Perempuan</option>
+													<option value="Mandiri">Mandiri</option>
+													<option value="BCA">BCA</option>
+													<option value="Bank Indonesia">Bank Indonesia</option>
+													<option value="BRI">BRI</option>
 												</select>
 											</div>
 										</div>
 										<div class="row form-group">
 											<div class="col-md-12">
-												<label class="sr-only" for="email">Email</label>
-												<input type="email" name="email" id="email" class="form-control" placeholder="Email Anda" required>
+												<label class="sr-only" for="name">Nasabah</label>
+												<input type="text" id="name" name="name" class="form-control" placeholder="Nasabah" required>
 											</div>
+
 										</div>
 										<div class="row form-group">
 											<div class="col-md-12">
-												<label class="sr-only" for="reservation_code">Kode Reservasi</label>
-												<input readonly="true" name="reservation_code" id="code_reservation" class="form-control" placeholder="Kode Reservasi Anda" value="<?php 
-												Function getRandomCode(){
-												$an = "abcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-												$su = strlen($an) - 1;
-												return substr($an, rand(0, $su), 1);
-											    }
-												for ($i = 0; $i < 6; $i++)
-												echo getRandomCode();
-												 ?>" required="true">
-												<small>*Harap Ingat Kode Reservasi anda</small>
+												<label class="sr-only" for="address">PIN</label>
+												<input type="password" id="address" name="address" class="form-control" placeholder="PIN" required>
 											</div>
+
+										</div>
+										<div class="row form-group">
+											<div class="col-md-12">
+												<label class="sr-only" for="phone">Saldo</label>
+												<input type="number" id="phone" name="phone" class="form-control" placeholder="Saldo Anda" required>
+											</div>	
 										</div>
 										<br><br>
-						<!-- <div class="row form-group">
-							<div class="col-md-12">
-								<label class="sr-only" for="name">Seat Code</label>
-								<select name="seat_code" class="form-control">
-									<//?php for ($i=1; $i <=$seat_qty; $i++) { ?>
-									<option><//?php echo "A$i"; ?></option>
-									<//?php } ?>
-								</select>
-							</div>
-						</div>-->
-						<br>
-						<?php if ($penumpang>1) { ?>
-							<?php for ($i=1; $i <$penumpang; $i++) { ?>
-								<div style="background-color: #F2F2F2; border-radius: 10px;">
-										<div class="row form-group">
-											<div class="col-md-12" style="margin-top: 20px; padding-left: 50px; padding-right: 50px;">
-												<label class="sr-only" for="name">Nama</label>
-												<input type="text" id="name" name="name" class="form-control" placeholder="Nama Penumpang" required>
-											</div>
-										</div>
-										<div class="row form-group">
-											<div class="col-md-12" style="margin-bottom:30px; padding-left: 50px; padding-right: 50px;">
-												<label class="sr-only" for="name">No.Telp</label>
-												<input type="number" id="phone" name="phone" class="form-control" placeholder="No.Telepon" required>
-											</div>
-										</div>
-									</div><br>
-							<?php } } ?>				
-									<h3>Pilih Tempat Duduk</h3>
-										<div class="row" style="background-color: #F2F2F2;"><br>
-											<center><div style="background-color: #09C6AB; color: white; padding: 10px 10px; width: 20%;">Pilot</div></center><br>
-											<?php 
-											for ($i=1; $i <=$seat_qty; $i++) { ?>
 
-											<div class="form-group col-lg-2 col-md-2 col-sm-2 col-xs-2 seat">
-												<div <?php $no=0; foreach($data_res as $row) { $no++; if($i==$row['seat_code']){echo 'style="background-color:#AEAEAE;"';}}?>>
-												<li><input type="checkbox" limit="1" class="flat-red" <?php foreach($data_res as $row) { $no++; if($i==$row['seat_code']){echo 'checked disabled';}}?> name="seat_code" value="<?php echo $i; ?>"></li>
-												<li><?php echo 'A'.$i; ?></li>
-												</div>
-											</div>
-											<?php } ?>
-										</div><br>
 					<div class="form-group">
-						<input type="submit" value="Kirim" class="btn btn-primary">
+						<a href="<?php echo base_url() ;?>travelitacon/step4" class="btn btn-primary col-md-12">Selanjutnya</a>
+						<!-- <input type="submit" value="Kirim" class="btn btn-primary col-md-12"> -->
 					</div>
 
-				</form>
-			</div>
-			<div class="col-md-1"></div>
-			<div class="col-md-5 col-md-push-1 animate-box">
-				<div class="gtco-contact-info">
-					<h3>Informasi Penerbangan</h3>
-					<ul>
-						<li><img src="<?php echo URL_ASSETS; ?>images/logo/<?php echo $logo;?>" height="20%" width="30%"></li>
-						<li class="plane"><?php echo $plane_name;?> <small>(Boeing <?php echo $code;?>)</small></li>
-						<li class="address"><?php echo $rute_form;?></li>
-						<li class="address"><?php echo $rute_to;?></li>
-						<li class="calendar"><?php echo $depart_date;?></li>
-						<li class="clock"><?php echo $depart_at;?> WIB</li>
-						<li class="pricetag">Rp <?php $total= $price*$penumpang; echo number_format($total,2);?></li>
-						<li class="seat">Tersisa <?php echo $seat_qty-$tot_kursi;?> Kursi</li>
-						</ul>
-				</div>
+				<!-- </form> -->		
 			</div>
 		</div>
 	</div>
@@ -337,7 +259,7 @@
         <!-- Main -->
         <script src="<?php echo URL_ASSETS;?>front/js/main.js"></script>
         <script src="<?php echo URL_ASSETS;?>admin/plugins/iCheck/icheck.min.js"></script>
-<script type="text/javascript">
+        <script>
         	$(function () {
         		$('input[type="checkbox"].minimal, input[type="radio"].minimal').iCheck({
         			checkboxClass: 'icheckbox_minimal-blue',

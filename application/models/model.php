@@ -28,8 +28,30 @@ class Model extends CI_Model {
         $query = $this->db->get_where('user', $data);
         return $query;
     }
+    function GetDataReservasi($data) {
+        $query = $this->db->get_where('reservation, customer, rute', $data);
+        return $query;
+    }
 	public function getuser($where=" "){
 		$data =$this->db->query('select * from user ' .$where);
+		return $data;
+	}
+	public function getres($where=" "){
+		$data =$this->db->query('select * from reservation ' .$where);
+		return $data;
+	}
+	public function getreservation($where=" "){
+		$data =$this->db->query('select * from reservation, rute, customer, transportation ' .$where);
+		return $data;
+	}
+	function tot_kursi($where=" "){
+		return $this->db->query("select count(*) as tot_kursi from reservation ".$where);
+	}
+	function cek_res($where=" "){
+		return $this->db->query("select count(*) as cek_res from reservation, customer ".$where);
+	}
+	public function getcustomer($where=" "){
+		$data =$this->db->query('select * from customer ' .$where);
 		return $data;
 	}
 	public function gettrans($where=" "){
@@ -46,6 +68,10 @@ class Model extends CI_Model {
 	}
 	public function getrute($where=" "){
 		$data =$this->db->query('select * from rute ' .$where);
+		return $data;
+	}
+	public function getrutetrans($where=" "){
+		$data =$this->db->query('select * from rute, transportation ' .$where);
 		return $data;
 	}
 	public function update_data($where,$data,$table){

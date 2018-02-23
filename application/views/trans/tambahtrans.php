@@ -85,28 +85,28 @@
               <div class="form-group">
                 <label>Kode</label>
                 <div class="input-group">
-                <input type="text" id="code" class="form-control" name="code" required>
-                    <div class="input-group-addon">
+                  <div class="input-group-addon bg-purple">
                       <i class="fa fa-barcode"></i>
                     </div>
+                <input type="text" id="code" class="form-control" name="code" required>
                 </div>
               </div>
               <div class="form-group">
                 <label>Deskripsi</label>
                 <div class="input-group">
-                <input type="text" id="description" class="form-control" name="description" required>
-                  <div class="input-group-addon">
+                <div class="input-group-addon bg-green">
                     <i class="fa fa-text-width"></i>
                   </div>
+                <input type="text" id="description" class="form-control" name="description" required>
               </div>
               </div>
               <div class="form-group">
                 <label>Tempat Duduk</label>
                 <div class="input-group">
-                <input type="number" id="seat_qty" class="form-control" name="seat_qty" required>
-                    <div class="input-group-addon">
+                  <div class="input-group-addon bg-orange">
                       <i class="fa fa-plane"></i>
                     </div>
+                <input type="number" id="seat_qty" class="form-control" name="seat_qty" required>
                 </div>
               </div>
               <div class="form-group">

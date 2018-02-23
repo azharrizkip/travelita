@@ -92,7 +92,8 @@
                 <thead>
                 <tr>
                   <th>No.</th>
-                  <th>Kode</th>
+                  <th>Nama Pesawat</th>
+                  <th>Kode</th>                  
                   <th>Deskripsi</th>
                   <th>Tempat Duduk</th>
                   <th>Aksi</th>
@@ -102,7 +103,8 @@
                   <?php $no=0; foreach($data_trans as $row) { $no++ ?>
                 <tr>
                   <td><?php echo $no; ?></td>
-                  <td><?php echo $row['code']; ?></td>
+                  <td><?php echo $row['plane_name']; ?></td>
+                  <td><?php echo $row['code']; ?></td>                  
                   <td><?php echo $row['description']; ?></td>
                   <td><?php echo $row['seat_qty']; ?></td>
                   <td>
@@ -115,6 +117,7 @@
                 <tfoot>
                 <tr>
                   <th>No.</th>
+                  <th>Nama Pesawat</th>
                   <th>Kode</th>
                   <th>Deskripsi</th>
                   <th>Tempat Duduk</th>

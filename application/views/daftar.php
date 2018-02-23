@@ -55,7 +55,17 @@
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
-
+<style type="text/css">
+.row-mt-6em {
+    margin-top: 6em;
+  }
+@media screen and (max-width: 768px) {
+  .row-mt-6em {
+    margin-top: 2em;
+    text-align: center;
+  }
+}
+</style>
 	</head>
 	<body>
 	

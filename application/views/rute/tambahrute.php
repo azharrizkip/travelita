@@ -85,12 +85,22 @@
                   </div>
                 </div>
                </div>
+                <div class="form-group">
+                <label>Tanggal</label>
+                <div class="input-group date">
+                  <input type="text" readonly="true" name="depart_date" class="form-control pull-right" id="datepicker" required>
+                  <div class="input-group-addon bg-purple">
+                    <i class="fa fa-calendar"></i>
+                  </div>
+                </div>
+                <!-- /.input group -->
+              </div>
               <div class="form-group">
                 <label>Keberangkatan</label>
                 <div class="input-group">
                 <select class="form-control select2" name="rute_form">
                   <?php $no=0; foreach($data_kota as $row) { $no++ ?>
-                  <option value="<?php echo $row['kota']?>"><?php echo $row['kota']?> (<?php echo $row['bandara']?>)</option>
+                  <option><?php echo $row['kota']?> (<?php echo $row['bandara']?>)</option>
                   <?php } ?>
                 </select>
                     <div class="input-group-addon bg-aqua">
@@ -103,7 +113,7 @@
                 <div class="input-group">
                  <select class="form-control select2" name="rute_to">
                   <?php $no=0; foreach($data_kota as $row) { $no++ ?>
-                  <option value="<?php echo $row['kota']?>"><?php echo $row['kota']?> (<?php echo $row['bandara']?>)</option>
+                  <option><?php echo $row['kota']?> (<?php echo $row['bandara']?>)</option>
                   <?php } ?>
                 </select>
                     <div class="input-group-addon bg-aqua">
@@ -125,7 +135,7 @@
                 <div class="input-group">
                 <select class="form-control select2" name="transportationid">
                   <?php $no=0; foreach($data_trans as $row) { $no++ ?>
-                  <option><?php echo $row['transportationid']?> (<?php echo $row['code']?>)</option>
+                  <option value="<?php echo $row['transportationid']?>"><?php echo $row['plane_name']?> (<?php echo $row['code']?>)</option>
                   <?php } ?>
                 </select>
                     <div class="input-group-addon bg-blue">
